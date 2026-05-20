@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'JPG, PNG, WebP 이미지를 흑백(그레이스케일)으로 변환하고 다운로드하세요.'
       : 'Convert JPG, PNG, or WebP images to grayscale (black and white) and download instantly.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/grayscale-image`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/grayscale-image`,
+        en: `https://tooltoolz.com/en/tools/grayscale-image`,
+      },
+    },
   }
 }
 

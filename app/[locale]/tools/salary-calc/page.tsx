@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '연봉 실수령 계산기 무료 온라인 - tooltoolz' : 'Salary Calculator Free Online - tooltoolz',
     description: isKr ? '연봉, 공제율, 월 실수령액을 간단히 계산하세요.' : 'Estimate annual net salary and monthly take-home pay.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/salary-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/salary-calc`,
+        en: `https://tooltoolz.com/en/tools/salary-calc`,
+      },
+    },
   }
 }
 

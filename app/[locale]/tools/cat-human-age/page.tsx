@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '고양이 인간 나이 변환기 무료 온라인 - tooltoolz' : 'Cat Age to Human Age Converter Free Online - tooltoolz',
     description: isKr ? '고양이 나이를 사람 나이로 대략 변환하고 생애 단계를 확인하세요.' : 'Convert cat age to an approximate human age and life stage.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/cat-human-age`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/cat-human-age`,
+        en: `https://tooltoolz.com/en/tools/cat-human-age`,
+      },
+    },
   }
 }
 

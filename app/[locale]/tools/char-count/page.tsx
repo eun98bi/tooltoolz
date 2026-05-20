@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? '글자수, 단어수, 줄수, 바이트를 실시간으로 세어드려요. 설치 없이 바로 사용.'
       : 'Count characters, words, lines, and bytes in real time. No install needed.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/char-count`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/char-count`,
+        en: `https://tooltoolz.com/en/tools/char-count`,
+      },
+    },
   }
 }
 

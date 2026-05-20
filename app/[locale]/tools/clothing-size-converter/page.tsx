@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '국제 의류 사이즈 변환기 무료 온라인 - tooltoolz' : 'International Clothing Size Converter Free Online - tooltoolz',
     description: isKr ? '가슴둘레와 허리둘레로 한국, US, EU, 청바지 사이즈를 대략 변환하세요.' : 'Convert clothing sizes from chest and waist measurements.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/clothing-size-converter`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/clothing-size-converter`,
+        en: `https://tooltoolz.com/en/tools/clothing-size-converter`,
+      },
+    },
   }
 }
 

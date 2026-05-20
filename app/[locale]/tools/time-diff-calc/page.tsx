@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '시간 차 계산기 무료 온라인 - tooltoolz' : 'Time Difference Calculator Free Online - tooltoolz',
     description: isKr ? '두 시각 사이의 분, 시간, 일을 계산하세요.' : 'Calculate minutes, hours, and days between two times.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/time-diff-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/time-diff-calc`,
+        en: `https://tooltoolz.com/en/tools/time-diff-calc`,
+      },
+    },
   }
 }
 

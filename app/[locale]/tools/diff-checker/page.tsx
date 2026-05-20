@@ -9,6 +9,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '텍스트 비교 (Diff) 온라인 무료 — tooltoolz' : 'Diff Checker Free Online — tooltoolz',
     description: isKr ? '두 텍스트의 차이점을 시각화합니다.' : 'Visualize differences between two texts.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/diff-checker`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/diff-checker`,
+        en: `https://tooltoolz.com/en/tools/diff-checker`,
+      },
+    },
   }
 }
 

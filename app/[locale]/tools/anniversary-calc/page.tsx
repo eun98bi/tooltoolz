@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '기념일 계산기 무료 온라인 - tooltoolz' : 'Anniversary Calculator Free Online - tooltoolz',
     description: isKr ? '시작일에서 100일, 1000일, 1년 및 원하는 기념일 날짜를 계산하세요.' : 'Calculate anniversary dates, day counts, and milestone dates.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/anniversary-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/anniversary-calc`,
+        en: `https://tooltoolz.com/en/tools/anniversary-calc`,
+      },
+    },
   }
 }
 

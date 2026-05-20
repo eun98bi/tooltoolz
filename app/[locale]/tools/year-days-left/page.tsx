@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '올해 남은 날짜 계산기 무료 온라인 - tooltoolz' : 'Days Left This Year Free Online - tooltoolz',
     description: isKr ? '선택한 날짜 기준으로 올해 남은 일수와 진행률을 계산하세요.' : 'Calculate remaining days in the year and year progress.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/year-days-left`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/year-days-left`,
+        en: `https://tooltoolz.com/en/tools/year-days-left`,
+      },
+    },
   }
 }
 

@@ -9,6 +9,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? 'JSON Validator 온라인 무료 — tooltoolz' : 'JSON Validator Free Online — tooltoolz',
     description: isKr ? 'JSON 문법 오류를 즉시 찾아냅니다.' : 'Find and fix JSON syntax errors instantly.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/json-validator`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/json-validator`,
+        en: `https://tooltoolz.com/en/tools/json-validator`,
+      },
+    },
   }
 }
 

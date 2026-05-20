@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'JPG, PNG, WebP 이미지를 브라우저에서 원하는 픽셀 크기로 리사이즈하고 다운로드하세요.'
       : 'Resize JPG, PNG, and WebP images to exact pixel dimensions in your browser.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/img-resize`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/img-resize`,
+        en: `https://tooltoolz.com/en/tools/img-resize`,
+      },
+    },
   }
 }
 

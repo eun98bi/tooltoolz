@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '복리 계산기 무료 온라인 - tooltoolz' : 'Compound Interest Calculator Free Online - tooltoolz',
     description: isKr ? '원금, 월 납입액, 수익률, 기간으로 복리 성장을 계산하세요.' : 'Calculate compound growth from principal, contributions, return, and time.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/compound-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/compound-calc`,
+        en: `https://tooltoolz.com/en/tools/compound-calc`,
+      },
+    },
   }
 }
 

@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'URL이나 텍스트를 QR코드로 즉시 변환합니다. PNG 다운로드 가능.'
       : 'Convert URLs or text to QR codes instantly. Download as PNG.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/qr-code`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/qr-code`,
+        en: `https://tooltoolz.com/en/tools/qr-code`,
+      },
+    },
   }
 }
 

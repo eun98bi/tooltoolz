@@ -9,6 +9,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? 'URL 인코더/디코더 온라인 무료 — tooltoolz' : 'URL Encoder/Decoder Free Online — tooltoolz',
     description: isKr ? 'URL 퍼센트 인코딩/디코딩을 즉시 처리합니다.' : 'Percent-encode or decode URL strings instantly.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/url-encoder`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/url-encoder`,
+        en: `https://tooltoolz.com/en/tools/url-encoder`,
+      },
+    },
   }
 }
 

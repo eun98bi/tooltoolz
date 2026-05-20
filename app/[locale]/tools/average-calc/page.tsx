@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '평균 계산기 무료 온라인 - tooltoolz' : 'Average Calculator Free Online - tooltoolz',
     description: isKr ? '평균, 중앙값, 최빈값, 합계, 최소/최대값을 계산하세요.' : 'Calculate mean, median, mode, sum, min, and max.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/average-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/average-calc`,
+        en: `https://tooltoolz.com/en/tools/average-calc`,
+      },
+    },
   }
 }
 

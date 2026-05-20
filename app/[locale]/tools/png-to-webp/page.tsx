@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'PNG 이미지를 브라우저에서 바로 WebP로 변환하고 품질을 조절해 다운로드하세요.'
       : 'Convert PNG images to WebP in your browser with adjustable quality.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/png-to-webp`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/png-to-webp`,
+        en: `https://tooltoolz.com/en/tools/png-to-webp`,
+      },
+    },
   }
 }
 

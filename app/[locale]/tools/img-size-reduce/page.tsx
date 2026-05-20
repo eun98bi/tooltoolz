@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'JPG, PNG, WebP 이미지를 목표 KB 용량에 맞춰 브라우저에서 자동 압축하세요.'
       : 'Reduce JPG, PNG, and WebP images toward a target KB size directly in your browser.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/img-size-reduce`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/img-size-reduce`,
+        en: `https://tooltoolz.com/en/tools/img-size-reduce`,
+      },
+    },
   }
 }
 

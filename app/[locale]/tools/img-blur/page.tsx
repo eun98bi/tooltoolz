@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'JPG, PNG, WebP 이미지 전체 또는 선택 영역에 블러를 적용하고 다운로드하세요.'
       : 'Apply blur to an entire JPG, PNG, or WebP image, or blur only a selected area.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/img-blur`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/img-blur`,
+        en: `https://tooltoolz.com/en/tools/img-blur`,
+      },
+    },
   }
 }
 

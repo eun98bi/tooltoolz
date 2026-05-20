@@ -9,6 +9,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? 'HTML Escape 온라인 무료 — tooltoolz' : 'HTML Escape Free Online — tooltoolz',
     description: isKr ? 'HTML 특수문자를 이스케이프/언이스케이프합니다.' : 'Escape or unescape HTML special characters.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/html-escape`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/html-escape`,
+        en: `https://tooltoolz.com/en/tools/html-escape`,
+      },
+    },
   }
 }
 

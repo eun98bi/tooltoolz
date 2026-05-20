@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? 'GPA 계산기 무료 온라인 - tooltoolz' : 'GPA Calculator Free Online - tooltoolz',
     description: isKr ? '학점과 이수 학점으로 가중 GPA를 계산하세요.' : 'Calculate weighted GPA from credits and grades.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/gpa-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/gpa-calc`,
+        en: `https://tooltoolz.com/en/tools/gpa-calc`,
+      },
+    },
   }
 }
 

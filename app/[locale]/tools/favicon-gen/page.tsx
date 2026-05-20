@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? '이미지에서 favicon.ico, favicon PNG, apple touch icon, SVG favicon을 브라우저에서 바로 생성하세요.'
       : 'Generate favicon.ico, favicon PNG files, apple touch icons, and SVG favicons from an image in your browser.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/favicon-gen`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/favicon-gen`,
+        en: `https://tooltoolz.com/en/tools/favicon-gen`,
+      },
+    },
   }
 }
 

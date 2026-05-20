@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '대출 계산기 무료 온라인 - tooltoolz' : 'Loan Calculator Free Online - tooltoolz',
     description: isKr ? '대출 원금, 금리, 기간으로 월 상환액과 총 이자를 계산하세요.' : 'Calculate monthly loan payment, total payment, and interest.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/loan-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/loan-calc`,
+        en: `https://tooltoolz.com/en/tools/loan-calc`,
+      },
+    },
   }
 }
 

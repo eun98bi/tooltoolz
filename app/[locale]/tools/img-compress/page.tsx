@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'JPG, PNG, WebP 이미지를 브라우저에서 압축하고 WebP 또는 JPG로 다운로드하세요.'
       : 'Compress JPG, PNG, and WebP images in your browser and download as WebP or JPG.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/img-compress`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/img-compress`,
+        en: `https://tooltoolz.com/en/tools/img-compress`,
+      },
+    },
   }
 }
 

@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '동전 던지기 무료 온라인 - tooltoolz' : 'Coin Flip Free Online - tooltoolz',
     description: isKr ? '앞면과 뒷면을 무작위로 뽑고 결과 기록을 확인하세요.' : 'Flip a virtual coin and track heads, tails, and recent history.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/coin-flip`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/coin-flip`,
+        en: `https://tooltoolz.com/en/tools/coin-flip`,
+      },
+    },
   }
 }
 

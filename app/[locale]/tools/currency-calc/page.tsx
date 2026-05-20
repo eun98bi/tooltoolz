@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '환율 계산기 무료 온라인 - tooltoolz' : 'Currency Calculator Free Online - tooltoolz',
     description: isKr ? '직접 입력한 환율로 금액을 변환하세요.' : 'Convert amounts with a manually entered exchange rate.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/currency-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/currency-calc`,
+        en: `https://tooltoolz.com/en/tools/currency-calc`,
+      },
+    },
   }
 }
 

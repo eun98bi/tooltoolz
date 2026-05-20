@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'HEX ↔ RGB ↔ HSL 색상 코드를 즉시 변환합니다. 색상 미리보기 포함.'
       : 'Convert between HEX, RGB, and HSL color codes instantly. Includes color preview.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/color-converter`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/color-converter`,
+        en: `https://tooltoolz.com/en/tools/color-converter`,
+      },
+    },
   }
 }
 

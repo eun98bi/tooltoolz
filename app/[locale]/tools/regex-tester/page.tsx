@@ -7,7 +7,17 @@ import ToolSEOSection from '@/components/ui/ToolSEOSection'
 const slug = 'regex-tester' as const
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return { title: params.locale === 'kr' ? '정규식 테스터 무료 온라인 - tooltoolz' : 'Regex Tester Free Online - tooltoolz', description: 'Test regular expressions against text in real time.' }
+  return {
+    title: params.locale === 'kr' ? '정규식 테스터 무료 온라인 - tooltoolz' : 'Regex Tester Free Online - tooltoolz',
+    description: 'Test regular expressions against text in real time.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/regex-tester`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/regex-tester`,
+        en: `https://tooltoolz.com/en/tools/regex-tester`,
+      },
+    },
+  }
 }
 
 export default function Page({ params }: { params: { locale: string } }) {

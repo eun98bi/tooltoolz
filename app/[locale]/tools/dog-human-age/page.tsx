@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '강아지 인간 나이 변환기 무료 온라인 - tooltoolz' : 'Dog Age to Human Age Converter Free Online - tooltoolz',
     description: isKr ? '강아지 나이와 크기별 기준으로 사람 나이를 대략 변환하세요.' : 'Convert dog age to an approximate human age by size.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/dog-human-age`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/dog-human-age`,
+        en: `https://tooltoolz.com/en/tools/dog-human-age`,
+      },
+    },
   }
 }
 

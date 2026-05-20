@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'JPG, PNG, WebP 이미지를 브라우저에서 회전하거나 좌우/상하 반전하고 다운로드하세요.'
       : 'Rotate or flip JPG, PNG, and WebP images in your browser and download the result.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/img-rotate`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/img-rotate`,
+        en: `https://tooltoolz.com/en/tools/img-rotate`,
+      },
+    },
   }
 }
 

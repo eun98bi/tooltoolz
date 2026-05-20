@@ -9,6 +9,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? 'CSV to JSON 변환 온라인 무료 — tooltoolz' : 'CSV to JSON Converter Free Online — tooltoolz',
     description: isKr ? 'CSV를 JSON으로 즉시 변환합니다.' : 'Convert CSV data to JSON format instantly.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/csv-to-json`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/csv-to-json`,
+        en: `https://tooltoolz.com/en/tools/csv-to-json`,
+      },
+    },
   }
 }
 

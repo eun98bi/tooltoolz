@@ -20,6 +20,13 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   return {
     title: `${item?.title ?? params.slug} - tooltoolz`,
     description: item?.desc ?? 'Free online tool.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/${params.slug}`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/${params.slug}`,
+        en: `https://tooltoolz.com/en/tools/${params.slug}`,
+      },
+    },
   }
 }
 

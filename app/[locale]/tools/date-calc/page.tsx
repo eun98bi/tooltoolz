@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '날짜 계산기 무료 온라인 - tooltoolz' : 'Date Calculator Free Online - tooltoolz',
     description: isKr ? '날짜 차이, D-day, 날짜 더하기와 빼기를 계산하세요.' : 'Calculate date differences, D-days, and date addition or subtraction.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/date-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/date-calc`,
+        en: `https://tooltoolz.com/en/tools/date-calc`,
+      },
+    },
   }
 }
 

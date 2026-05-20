@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'JSON을 보기 좋게 정렬하거나 압축합니다. 문법 오류도 즉시 확인.'
       : 'Format, validate, and minify JSON instantly. Syntax errors highlighted.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/json-format`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/json-format`,
+        en: `https://tooltoolz.com/en/tools/json-format`,
+      },
+    },
   }
 }
 

@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'JPG, JPEG 이미지를 브라우저에서 바로 PNG 파일로 변환하고 다운로드하세요. 업로드 없이 무료로 사용할 수 있습니다.'
       : 'Convert JPG and JPEG images to PNG in your browser. Free, instant, and no upload required.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/jpg-to-png`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/jpg-to-png`,
+        en: `https://tooltoolz.com/en/tools/jpg-to-png`,
+      },
+    },
   }
 }
 

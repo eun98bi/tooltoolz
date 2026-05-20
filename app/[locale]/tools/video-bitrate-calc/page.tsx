@@ -5,7 +5,17 @@ import ToolPage from '@/components/ui/ToolPage'
 import ToolSEOSection from '@/components/ui/ToolSEOSection'
 const slug = 'video-bitrate-calc' as const
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return { title: params.locale === 'kr' ? '영상 비트레이트 계산기 무료 온라인 - tooltoolz' : 'Video Bitrate Calculator Free Online - tooltoolz', description: 'Estimate file size and target video bitrate.' }
+  return {
+    title: params.locale === 'kr' ? '영상 비트레이트 계산기 무료 온라인 - tooltoolz' : 'Video Bitrate Calculator Free Online - tooltoolz',
+    description: 'Estimate file size and target video bitrate.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/video-bitrate-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/video-bitrate-calc`,
+        en: `https://tooltoolz.com/en/tools/video-bitrate-calc`,
+      },
+    },
+  }
 }
 export default function Page({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale)

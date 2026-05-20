@@ -7,7 +7,17 @@ import ToolSEOSection from '@/components/ui/ToolSEOSection'
 const slug = 'base-converter' as const
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return { title: params.locale === 'kr' ? '진법 변환기 무료 온라인 - tooltoolz' : 'Base Converter Free Online - tooltoolz', description: 'Convert between binary, octal, decimal, and hexadecimal.' }
+  return {
+    title: params.locale === 'kr' ? '진법 변환기 무료 온라인 - tooltoolz' : 'Base Converter Free Online - tooltoolz',
+    description: 'Convert between binary, octal, decimal, and hexadecimal.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/base-converter`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/base-converter`,
+        en: `https://tooltoolz.com/en/tools/base-converter`,
+      },
+    },
+  }
 }
 
 export default function Page({ params }: { params: { locale: string } }) {

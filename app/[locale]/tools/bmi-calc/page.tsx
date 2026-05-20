@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? 'BMI 계산기 무료 온라인 - tooltoolz' : 'BMI Calculator Free Online - tooltoolz',
     description: isKr ? '키와 체중으로 BMI와 정상 체중 범위를 계산하세요.' : 'Calculate BMI and a normal weight range from height and weight.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/bmi-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/bmi-calc`,
+        en: `https://tooltoolz.com/en/tools/bmi-calc`,
+      },
+    },
   }
 }
 

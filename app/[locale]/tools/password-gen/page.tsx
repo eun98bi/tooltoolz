@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? '안전한 랜덤 비밀번호를 즉시 생성합니다. 길이·문자 옵션 커스텀 가능.'
       : 'Generate strong random passwords instantly. Customize length and character sets.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/password-gen`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/password-gen`,
+        en: `https://tooltoolz.com/en/tools/password-gen`,
+      },
+    },
   }
 }
 

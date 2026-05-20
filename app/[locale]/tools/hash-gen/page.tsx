@@ -7,7 +7,17 @@ import ToolSEOSection from '@/components/ui/ToolSEOSection'
 const slug = 'hash-gen' as const
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return { title: params.locale === 'kr' ? '해시 생성기 무료 온라인 - tooltoolz' : 'Hash Generator Free Online - tooltoolz', description: 'Generate hashes from text locally in your browser.' }
+  return {
+    title: params.locale === 'kr' ? '해시 생성기 무료 온라인 - tooltoolz' : 'Hash Generator Free Online - tooltoolz',
+    description: 'Generate hashes from text locally in your browser.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/hash-gen`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/hash-gen`,
+        en: `https://tooltoolz.com/en/tools/hash-gen`,
+      },
+    },
+  }
 }
 
 export default function Page({ params }: { params: { locale: string } }) {

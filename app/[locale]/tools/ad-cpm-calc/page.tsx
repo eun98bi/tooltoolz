@@ -5,7 +5,17 @@ import ToolPage from '@/components/ui/ToolPage'
 import ToolSEOSection from '@/components/ui/ToolSEOSection'
 const slug = 'ad-cpm-calc' as const
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return { title: params.locale === 'kr' ? '광고 CPM 계산기 무료 온라인 - tooltoolz' : 'Ad CPM Calculator Free Online - tooltoolz', description: 'Calculate CPM, CPC, CTR, and ROAS.' }
+  return {
+    title: params.locale === 'kr' ? '광고 CPM 계산기 무료 온라인 - tooltoolz' : 'Ad CPM Calculator Free Online - tooltoolz',
+    description: 'Calculate CPM, CPC, CTR, and ROAS.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/ad-cpm-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/ad-cpm-calc`,
+        en: `https://tooltoolz.com/en/tools/ad-cpm-calc`,
+      },
+    },
+  }
 }
 export default function Page({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale)

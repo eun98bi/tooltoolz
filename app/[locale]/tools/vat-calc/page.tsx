@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? 'VAT 계산기 무료 온라인 - tooltoolz' : 'VAT Calculator Free Online - tooltoolz',
     description: isKr ? '부가세 포함, 별도, 역산 금액을 계산하세요.' : 'Calculate VAT added, VAT amount, and reverse VAT.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/vat-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/vat-calc`,
+        en: `https://tooltoolz.com/en/tools/vat-calc`,
+      },
+    },
   }
 }
 

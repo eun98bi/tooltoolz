@@ -13,6 +13,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? '줄바꿈(개행문자)을 제거하거나 공백·커스텀 문자로 변환합니다. CRLF↔LF 변환 지원. 설치 없이 바로 사용.'
       : 'Remove or convert newlines: strip all, replace with space, collapse blank lines, or CRLF↔LF. No install needed.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/newline-remove`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/newline-remove`,
+        en: `https://tooltoolz.com/en/tools/newline-remove`,
+      },
+    },
   }
 }
 

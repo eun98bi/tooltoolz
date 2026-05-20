@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '살아온 날짜 계산기 무료 온라인 - tooltoolz' : 'Days Lived Calculator Free Online - tooltoolz',
     description: isKr ? '생년월일 기준으로 살아온 일수, 주수, 개월수, 다음 10000일 날짜를 계산하세요.' : 'Calculate days, weeks, months, years lived, and your 10000th day.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/lived-days-calc`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/lived-days-calc`,
+        en: `https://tooltoolz.com/en/tools/lived-days-calc`,
+      },
+    },
   }
 }
 

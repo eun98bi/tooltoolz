@@ -7,7 +7,17 @@ import ToolSEOSection from '@/components/ui/ToolSEOSection'
 const slug = 'robots-txt-gen' as const
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return { title: params.locale === 'kr' ? 'robots.txt 생성기 무료 온라인 - tooltoolz' : 'robots.txt Generator Free Online - tooltoolz', description: 'Create robots.txt allow and disallow rules.' }
+  return {
+    title: params.locale === 'kr' ? 'robots.txt 생성기 무료 온라인 - tooltoolz' : 'robots.txt Generator Free Online - tooltoolz',
+    description: 'Create robots.txt allow and disallow rules.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/robots-txt-gen`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/robots-txt-gen`,
+        en: `https://tooltoolz.com/en/tools/robots-txt-gen`,
+      },
+    },
+  }
 }
 
 export default function Page({ params }: { params: { locale: string } }) {

@@ -5,7 +5,17 @@ import ToolPage from '@/components/ui/ToolPage'
 import ToolSEOSection from '@/components/ui/ToolSEOSection'
 const slug = 'baseball-stats' as const
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return { title: params.locale === 'kr' ? '야구 스탯 계산기 무료 온라인 - tooltoolz' : 'Baseball Stats Calculator Free Online - tooltoolz', description: 'Calculate batting average, OBP, SLG, OPS, and ERA.' }
+  return {
+    title: params.locale === 'kr' ? '야구 스탯 계산기 무료 온라인 - tooltoolz' : 'Baseball Stats Calculator Free Online - tooltoolz',
+    description: 'Calculate batting average, OBP, SLG, OPS, and ERA.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/baseball-stats`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/baseball-stats`,
+        en: `https://tooltoolz.com/en/tools/baseball-stats`,
+      },
+    },
+  }
 }
 export default function Page({ params }: { params: { locale: string } }) {
   setRequestLocale(params.locale)

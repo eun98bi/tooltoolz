@@ -7,7 +7,17 @@ import ToolSEOSection from '@/components/ui/ToolSEOSection'
 const slug = 'lorem-ipsum-gen' as const
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return { title: params.locale === 'kr' ? 'Lorem Ipsum 생성기 무료 온라인 - tooltoolz' : 'Lorem Ipsum Generator Free Online - tooltoolz', description: 'Generate placeholder paragraphs, sentences, and words.' }
+  return {
+    title: params.locale === 'kr' ? 'Lorem Ipsum 생성기 무료 온라인 - tooltoolz' : 'Lorem Ipsum Generator Free Online - tooltoolz',
+    description: 'Generate placeholder paragraphs, sentences, and words.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/lorem-ipsum-gen`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/lorem-ipsum-gen`,
+        en: `https://tooltoolz.com/en/tools/lorem-ipsum-gen`,
+      },
+    },
+  }
 }
 
 export default function Page({ params }: { params: { locale: string } }) {

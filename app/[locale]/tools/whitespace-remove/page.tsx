@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? '앞뒤·중복 공백을 일괄 제거합니다. 각 줄 트림, 모든 공백 제거 등 5가지 모드. 설치 없이 바로 사용.'
       : 'Trim, collapse, or remove all spaces from your text. 5 modes. No install needed.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/whitespace-remove`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/whitespace-remove`,
+        en: `https://tooltoolz.com/en/tools/whitespace-remove`,
+      },
+    },
   }
 }
 

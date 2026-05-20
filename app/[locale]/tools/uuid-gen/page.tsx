@@ -7,7 +7,17 @@ import ToolSEOSection from '@/components/ui/ToolSEOSection'
 const slug = 'uuid-gen' as const
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
-  return { title: params.locale === 'kr' ? 'UUID 생성기 무료 온라인 - tooltoolz' : 'UUID Generator Free Online - tooltoolz', description: 'Generate v4 UUIDs instantly.' }
+  return {
+    title: params.locale === 'kr' ? 'UUID 생성기 무료 온라인 - tooltoolz' : 'UUID Generator Free Online - tooltoolz',
+    description: 'Generate v4 UUIDs instantly.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/uuid-gen`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/uuid-gen`,
+        en: `https://tooltoolz.com/en/tools/uuid-gen`,
+      },
+    },
+  }
 }
 
 export default function Page({ params }: { params: { locale: string } }) {

@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? '국제 신발 사이즈 변환기 무료 온라인 - tooltoolz' : 'International Shoe Size Converter Free Online - tooltoolz',
     description: isKr ? '한국, 일본, 미국, 영국, 유럽 신발 사이즈를 발 길이 기준으로 변환하세요.' : 'Convert shoe sizes between Korea, Japan, US, UK, and EU.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/shoe-size-converter`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/shoe-size-converter`,
+        en: `https://tooltoolz.com/en/tools/shoe-size-converter`,
+      },
+    },
   }
 }
 

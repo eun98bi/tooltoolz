@@ -11,6 +11,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
     description: isKr
       ? 'UPPERCASE, lowercase, Title Case, camelCase, snake_case, kebab-case 등 9가지 변환. 설치 없이 바로 사용.'
       : 'Convert text to UPPER, lower, Title, Sentence, camelCase, PascalCase, snake_case, kebab-case. No install.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/case-converter`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/case-converter`,
+        en: `https://tooltoolz.com/en/tools/case-converter`,
+      },
+    },
   }
 }
 

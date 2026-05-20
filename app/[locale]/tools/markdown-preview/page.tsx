@@ -9,6 +9,13 @@ export async function generateMetadata({ params }: { params: { locale: string } 
   return {
     title: isKr ? 'Markdown 미리보기 온라인 무료 — tooltoolz' : 'Markdown Preview Free Online — tooltoolz',
     description: isKr ? '마크다운을 실시간으로 렌더링합니다.' : 'Live preview Markdown rendering.',
+    alternates: {
+      canonical: `https://tooltoolz.com/${params.locale}/tools/markdown-preview`,
+      languages: {
+        ko: `https://tooltoolz.com/kr/tools/markdown-preview`,
+        en: `https://tooltoolz.com/en/tools/markdown-preview`,
+      },
+    },
   }
 }
 
