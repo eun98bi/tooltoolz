@@ -803,6 +803,31 @@
     "latitude-longitude-finder": {
       "title": "경도 위도 알려주는 도구",
       "desc": "장소나 주소의 위도와 경도를 확인합니다"
+    },
+    "anagram-gen": {
+      "title": "애너그램 생성기",
+      "desc": "글자를 재배열해 가능한 모든 애너그램 조합을 찾아드려요",
+      "inputLabel": "단어 또는 문장 입력",
+      "placeholder": "예: listen",
+      "totalCount": "총 {count}가지 배열",
+      "showingRandom": "{count}가지 무작위 배열 표시 중",
+      "shuffle": "다시 섞기",
+      "noResults": "다른 배열이 없습니다",
+      "copyHint": "클릭해서 복사"
+    },
+    "morse-code": {
+      "title": "모스부호 변환기",
+      "desc": "텍스트를 모스부호로 변환하거나 모스부호를 텍스트로 해독합니다",
+      "encode": "텍스트 → 모스",
+      "decode": "모스 → 텍스트",
+      "input": "입력",
+      "output": "출력",
+      "placeholderEncode": "텍스트를 입력하세요...",
+      "placeholderDecode": "모스부호를 입력하세요 (예: ... --- ...)",
+      "outputPlaceholder": "결과가 여기에 나타납니다",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "referenceTitle": "모스부호 참조표"
     }
   },
   "toolPage": {

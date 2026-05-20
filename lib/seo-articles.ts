@@ -2722,6 +2722,58 @@ export const seoArticles: Record<string, Record<Locale, SeoArticle>> = {
       ],
     },
   },
+  'anagram-gen': {
+    kr: {
+      heading: '애너그램 생성기로 단어 글자 재배열하기',
+      paragraphs: [
+        '애너그램 생성기는 단어나 문장의 글자를 재배열해 만들 수 있는 모든 조합을 찾아주는 도구입니다. 글자 수가 7자 이하인 경우 중복 없이 모든 순열을 계산해 표시하며, 그보다 긴 단어는 무작위 배열을 30가지 생성해 보여줍니다.',
+        '애너그램은 창작 활동, 퍼즐 게임, 브랜드 네이밍, 닉네임 만들기처럼 새로운 조합이 필요할 때 자주 활용됩니다. 같은 글자로 만들 수 있는 다양한 배열을 한번에 확인하면 새로운 아이디어를 빠르게 찾을 수 있습니다.',
+        '애너그램 생성기 사용법은 간단합니다. 원하는 단어나 알파벳 조합을 입력하면 가능한 배열이 즉시 표시됩니다. 각 결과를 클릭하면 클립보드에 복사되어 바로 다른 곳에 붙여 넣을 수 있습니다.',
+        '글자 수가 많을수록 가능한 순열의 수는 급격히 늘어납니다. 8글자 이상의 단어는 수백만 가지 이상의 배열이 존재하기 때문에, 애너그램 생성기는 그 중 30가지를 무작위로 골라 보여줍니다. "다시 섞기" 버튼을 누르면 새로운 30가지 배열을 다시 생성합니다.',
+        '애너그램 생성기는 영어 단어 게임, 스크래블, 워들 변형, 크로스워드 퍼즐을 즐기는 사람에게 특히 유용합니다. 특정 글자 조합으로 만들 수 있는 단어를 빠르게 확인하고 게임 전략을 짤 때 도움이 됩니다.',
+        '반복 글자가 포함된 단어는 같은 배열이 여러 번 생성되지 않도록 처리되어 있습니다. 예를 들어 "aab"처럼 동일한 글자가 두 개 포함된 경우, 실제로 만들 수 있는 고유한 배열만 표시됩니다.',
+        '무료 애너그램 생성기, 온라인 애너그램 찾기, 단어 글자 재배열 도구가 필요하다면 설치 없이 브라우저에서 바로 사용할 수 있습니다. 애너그램 생성기로 원하는 단어 조합을 찾고 창작이나 게임에 바로 활용해 보세요.',
+      ],
+    },
+    en: {
+      heading: 'Anagram Generator for Letter Rearrangement',
+      paragraphs: [
+        'The Anagram Generator rearranges the letters of a word or phrase and displays all possible unique combinations. For words up to 7 characters, it computes every permutation without duplicates. For longer words, it generates 30 random arrangements instantly.',
+        'Anagrams are commonly used in creative writing, word puzzles, brand naming, and nickname generation. Seeing all possible letter combinations at once helps you spot new ideas that would take much longer to find manually.',
+        'Using the Anagram Generator is straightforward. Type or paste a word into the input field, and the results appear immediately. Click any result to copy it to your clipboard so you can paste it directly into your work.',
+        'As word length increases, the number of possible permutations grows exponentially. A word of 8 or more characters can have millions of arrangements, so the generator picks 30 at random to keep the output manageable. Press "Shuffle again" to generate a fresh set of 30 arrangements.',
+        'The Anagram Generator is especially useful for word games like Scrabble, Wordle variants, and crossword puzzles. Finding all arrangements of a given set of letters helps you quickly identify valid words and plan your next move.',
+        'When a word contains repeated letters, the generator avoids showing duplicate arrangements. For example, entering "aab" will only display the distinct combinations, not the same result generated from swapping two identical letters.',
+        'Whether you need a free anagram generator, an online anagram finder, or a quick letter rearrangement tool, this browser-based version works with no installation. Use the Anagram Generator to find new word combinations and apply them to your creative work or game strategy.',
+      ],
+    },
+  },
+  'morse-code': {
+    kr: {
+      heading: '모스부호 변환기로 텍스트와 모스부호 상호 변환하기',
+      paragraphs: [
+        '모스부호 변환기는 텍스트를 모스부호로 변환하거나 모스부호를 텍스트로 해독하는 무료 온라인 도구입니다. 영문 알파벳 A-Z, 숫자 0-9, 주요 특수문자를 지원하며 입력 즉시 결과가 표시됩니다.',
+        '모스부호는 점(.)과 선(-)의 조합으로 문자를 표현하는 부호 체계입니다. 글자 사이는 공백, 단어 사이는 슬래시(/)로 구분됩니다. 이 규칙만 이해하면 모스부호 변환기를 활용해 메시지를 빠르게 인코딩하거나 해독할 수 있습니다.',
+        '모스부호 변환기 사용법은 간단합니다. 상단에서 "텍스트 → 모스" 또는 "모스 → 텍스트" 모드를 선택한 뒤 입력창에 내용을 입력하면 결과가 자동으로 생성됩니다. 복사 버튼을 눌러 결과를 클립보드에 저장할 수 있습니다.',
+        '모스부호는 아마추어 무선 통신(HAM 라디오), 역사 교육, 비상 통신 학습, 게임과 퍼즐 등 다양한 분야에서 활용됩니다. 영화나 드라마에서 등장하는 모스부호 메시지를 직접 해독해보는 것도 재미있는 방법입니다.',
+        '모스부호를 입력할 때는 점(.)과 선(-)을 사용하고 글자 사이는 공백 하나, 단어 사이는 슬래시(/)로 구분합니다. 예를 들어 "SOS"는 모스부호로 "... --- ..."로 표현됩니다. 모스부호 변환기 하단의 참조표를 보면 각 글자와 숫자에 해당하는 부호를 바로 확인할 수 있습니다.',
+        '모스부호 변환기는 교육 현장에서도 유용하게 활용됩니다. 학생들이 모스부호 체계를 배우거나 해독 연습을 할 때 즉각적인 피드백을 제공합니다. 참조표가 함께 제공되어 암기 없이도 빠르게 변환 결과를 확인할 수 있습니다.',
+        '무료 모스부호 변환기, 온라인 모스부호 해독기, 모스부호 인코더가 필요하다면 설치 없이 바로 사용할 수 있습니다. 모스부호 변환기로 메시지를 인코딩하거나 해독해 다양한 활동에 활용해 보세요.',
+      ],
+    },
+    en: {
+      heading: 'Morse Code Converter for Text Encoding and Decoding',
+      paragraphs: [
+        'The Morse Code Converter translates text into Morse code or decodes Morse back into readable text instantly. It supports the full English alphabet A-Z, digits 0-9, and common punctuation. Results appear as you type with no extra steps required.',
+        'Morse code represents each character as a combination of dots (.) and dashes (-). Letters within a word are separated by a single space, and words are separated by a forward slash (/). Understanding this structure lets you use the Morse Code Converter to encode or decode any message quickly.',
+        'To use the Morse Code Converter, select either "Text → Morse" or "Morse → Text" mode at the top, then type or paste your content into the input field. The result is generated automatically. Click the copy button to save the output to your clipboard.',
+        'Morse code is used in amateur radio (HAM radio), historical education, emergency communication training, and puzzle games. You can also use the Morse Code Converter to decode Morse messages that appear in films, TV shows, or escape room challenges.',
+        'When entering Morse code for decoding, use dots and dashes with a single space between each character and a slash (/) between words. For example, SOS in Morse is "... --- ...". The reference table at the bottom of the converter shows every character and its Morse equivalent so you can check at a glance without memorizing the code.',
+        'The Morse Code Converter is a practical learning tool for students studying Morse code or communication history. It provides instant feedback when practicing encoding or decoding, and the built-in reference table makes it easy to get started without prior knowledge.',
+        'Whether you need a free Morse code converter, an online Morse code decoder, or a quick Morse code encoder, this browser-based tool is ready to use with no installation. Use the Morse Code Converter to encode your messages or decode unknown sequences and apply the results to radio, education, or entertainment.',
+      ],
+    },
+  },
   'special-chars': {
     kr: {
       heading: '특수문자 모음에서 기호와 문자를 빠르게 복사하기',

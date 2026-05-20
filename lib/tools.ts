@@ -29,7 +29,7 @@ export const CATEGORY_STYLE: Record<Category, { bg: string; text: string; border
 }
 
 export const tools: Tool[] = [
-  // Text (16)
+  // Text (17)
   { slug: 'char-count',         category: 'text',      icon: 'TXT', implemented: true },
   { slug: 'json-format',        category: 'text',      icon: '{}',  implemented: true },
   { slug: 'password-gen',       category: 'text',      icon: 'PW',  implemented: true },
@@ -46,6 +46,7 @@ export const tools: Tool[] = [
   { slug: 'csv-to-json',        category: 'text',      icon: 'CSV', implemented: true },
   { slug: 'diff-checker',       category: 'text',      icon: '+-',  implemented: true },
   { slug: 'random-nickname',    category: 'text',      icon: 'NIK', implemented: true },
+  { slug: 'morse-code',         category: 'text',      icon: '•−',  implemented: true },
 
   // Image (10)
   { slug: 'jpg-to-png',       category: 'image', icon: 'JPG',  implemented: true },
@@ -90,7 +91,7 @@ export const tools: Tool[] = [
   { slug: 'dog-human-age',        category: 'niche', icon: 'DOG', implemented: true },
   { slug: 'cat-human-age',        category: 'niche', icon: 'CAT', implemented: true },
 
-  // Generator/Game (10)
+  // Generator/Game (11)
   { slug: 'name-gen',           category: 'generator', icon: 'NAME', implemented: true },
   { slug: 'company-name-gen',   category: 'generator', icon: 'CO',   implemented: true },
   { slug: 'nickname-gen',       category: 'generator', icon: 'NICK', implemented: true },
@@ -101,6 +102,7 @@ export const tools: Tool[] = [
   { slug: 'team-divider',       category: 'generator', icon: 'TEAM', implemented: true },
   { slug: 'random-number-gen',  category: 'generator', icon: '123',  implemented: true },
   { slug: 'coin-flip',          category: 'generator', icon: 'COIN', implemented: true },
+  { slug: 'anagram-gen',        category: 'generator', icon: 'ANA',  implemented: true },
 
   // Developer (11)
   { slug: 'regex-tester',        category: 'dev', icon: '.*',  implemented: true },
