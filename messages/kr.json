@@ -1,0 +1,818 @@
+{
+  "nav": {
+    "home": "홈",
+    "langToggle": "EN",
+    "darkMode": "다크 모드"
+  },
+  "home": {
+    "title": "자주 쓰는 툴, 한 곳에",
+    "subtitle": "설치 없이 · 바로 사용",
+    "search": "툴 검색...",
+    "toolCount": "개 툴",
+    "free": "100% 무료",
+    "comingSoon": "준비 중",
+    "noResults": "검색 결과가 없습니다",
+    "categories": {
+      "all": "전체",
+      "text": "텍스트",
+      "image": "이미지",
+      "calc": "계산기",
+      "niche": "틈새",
+      "generator": "생성기",
+      "dev": "개발자",
+      "design": "디자인",
+      "kr": "한국",
+      "productivity": "생산성"
+    }
+  },
+  "tools": {
+    "char-count": {
+      "title": "글자수 세기",
+      "desc": "글자·단어·줄 수를 실시간으로 세어드려요",
+      "placeholder": "텍스트를 입력하세요...",
+      "charsFull": "글자 수",
+      "wordsFull": "단어 수",
+      "linesFull": "줄 수",
+      "bytesFull": "바이트",
+      "clear": "지우기",
+      "excludeSpaces": "공백 제외"
+    },
+    "json-format": {
+      "title": "JSON Formatter",
+      "desc": "JSON을 보기 좋게 정렬하거나 압축합니다",
+      "placeholder": "JSON을 붙여넣으세요...",
+      "format": "정렬",
+      "minify": "압축",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "errorPrefix": "오류: ",
+      "indent": "들여쓰기",
+      "spaces": "칸"
+    },
+    "password-gen": {
+      "title": "비밀번호 생성기",
+      "desc": "안전한 랜덤 비밀번호를 즉시 생성합니다",
+      "length": "길이",
+      "uppercase": "대문자 (A-Z)",
+      "lowercase": "소문자 (a-z)",
+      "numbers": "숫자 (0-9)",
+      "symbols": "특수문자 (!@#$...)",
+      "generate": "새로 생성",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "strength": "강도",
+      "weak": "약함",
+      "medium": "보통",
+      "strong": "강함",
+      "veryStrong": "매우 강함"
+    },
+    "qr-code": {
+      "title": "QR코드 생성기",
+      "desc": "URL이나 텍스트를 QR코드로 즉시 변환합니다",
+      "placeholder": "URL 또는 텍스트를 입력하세요...",
+      "download": "PNG 저장",
+      "size": "크기",
+      "errorLevel": "오류 보정",
+      "levels": {
+        "L": "낮음 (L)",
+        "M": "중간 (M)",
+        "Q": "높음 (Q)",
+        "H": "최고 (H)"
+      }
+    },
+    "color-converter": {
+      "title": "색상 코드 변환기",
+      "desc": "HEX ↔ RGB ↔ HSL 색상 코드를 변환합니다",
+      "hex": "HEX",
+      "rgb": "RGB",
+      "hsl": "HSL",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "preview": "색상 미리보기",
+      "red": "R",
+      "green": "G",
+      "blue": "B",
+      "hue": "H",
+      "saturation": "S",
+      "lightness": "L",
+      "invalidHex": "올바른 HEX 코드를 입력하세요 (#RRGGBB)"
+    },
+    "mobile-line-break": {
+      "title": "모바일 줄바꿈",
+      "desc": "모바일 화면 너비에 맞게 텍스트를 자동 줄바꿈",
+      "width": "한 줄 너비",
+      "cjkDouble": "한글·한자를 2칸으로 계산",
+      "input": "원본 텍스트",
+      "output": "결과",
+      "placeholder": "줄바꿈할 텍스트를 입력하세요...",
+      "outputPlaceholder": "줄바꿈된 결과가 여기에 표시됩니다",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "lineUnit": "줄"
+    },
+    "whitespace-remove": {
+      "title": "공백 제거",
+      "desc": "앞뒤·중복 공백을 일괄 제거합니다",
+      "modeLabel": "처리 방식",
+      "modes": {
+        "trim": "앞뒤 공백 제거",
+        "collapse": "중복 공백 하나로",
+        "trimCollapse": "앞뒤 + 중복 공백 모두",
+        "removeAll": "모든 공백 제거",
+        "trimLines": "각 줄 앞뒤 공백 제거"
+      },
+      "input": "원본 텍스트",
+      "output": "결과",
+      "placeholder": "텍스트를 붙여넣으세요...",
+      "outputPlaceholder": "결과가 여기에 표시됩니다",
+      "copy": "복사",
+      "copied": "복사됨!"
+    },
+    "newline-remove": {
+      "title": "줄바꿈 제거",
+      "desc": "개행문자를 제거하거나 변환합니다",
+      "modeLabel": "변환 방식",
+      "modes": {
+        "removeAll": "모두 제거 (한 줄로)",
+        "replaceSpace": "공백으로 교체",
+        "collapseBlank": "연속 빈 줄 하나로 축소",
+        "removeBlank": "빈 줄만 제거",
+        "crlf2lf": "CRLF → LF",
+        "lf2crlf": "LF → CRLF",
+        "custom": "직접 입력"
+      },
+      "customLabel": "교체 문자",
+      "customPlaceholder": "예) , 또는 <br>",
+      "input": "원본 텍스트",
+      "output": "결과",
+      "placeholder": "텍스트를 붙여넣으세요...",
+      "outputPlaceholder": "변환된 결과가 여기에 표시됩니다",
+      "copy": "복사",
+      "copied": "복사됨!"
+    },
+    "case-converter": {
+      "title": "대소문자 변환",
+      "desc": "UPPER / lower / Title Case 변환",
+      "modeLabel": "변환 방식",
+      "modes": {
+        "upper": "UPPERCASE",
+        "lower": "lowercase",
+        "title": "Title Case",
+        "sentence": "Sentence case",
+        "camel": "camelCase",
+        "pascal": "PascalCase",
+        "snake": "snake_case",
+        "kebab": "kebab-case",
+        "screaming": "SCREAMING_SNAKE"
+      },
+      "input": "원본 텍스트",
+      "output": "결과",
+      "placeholder": "텍스트를 붙여넣으세요...",
+      "outputPlaceholder": "변환된 결과가 여기에 표시됩니다",
+      "copy": "복사",
+      "copied": "복사됨!"
+    },
+    "slug-generator": {
+      "title": "Slug 생성기",
+      "desc": "텍스트를 URL-friendly slug로 변환합니다",
+      "separatorLabel": "구분자",
+      "hyphen": "하이픈 (-)",
+      "underscore": "언더스코어 (_)",
+      "koreanLabel": "한글 처리",
+      "koreanModes": {
+        "unicode": "유니코드 유지",
+        "remove": "한글 제거"
+      },
+      "resultLabel": "Slug",
+      "placeholder": "변환할 텍스트를 입력하세요...",
+      "copy": "복사",
+      "copied": "복사됨!"
+    },
+    "url-encoder": {
+      "title": "URL 인코더/디코더",
+      "desc": "특수문자 퍼센트 인코딩을 처리합니다",
+      "encode": "인코딩",
+      "decode": "디코딩",
+      "input": "원본",
+      "output": "결과",
+      "placeholder": "텍스트를 입력하세요...",
+      "outputPlaceholder": "결과가 여기에 표시됩니다",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "error": "디코딩 오류: 잘못된 URL 인코딩 형식입니다"
+    },
+    "base64-converter": {
+      "title": "Base64 변환",
+      "desc": "텍스트를 Base64로 인코딩/디코딩합니다",
+      "encode": "인코딩",
+      "decode": "디코딩",
+      "input": "원본",
+      "output": "결과",
+      "placeholder": "텍스트를 입력하세요...",
+      "outputPlaceholder": "결과가 여기에 표시됩니다",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "error": "디코딩 오류: 올바른 Base64 문자열을 입력하세요"
+    },
+    "json-validator": {
+      "title": "JSON Validator",
+      "desc": "JSON 문법 오류 위치를 표시합니다",
+      "placeholder": "JSON을 붙여넣으세요...",
+      "valid": "유효한 JSON",
+      "invalid": "문법 오류",
+      "keys": "키",
+      "size": "크기",
+      "depth": "깊이",
+      "copy": "정렬된 JSON 복사",
+      "copied": "복사됨!"
+    },
+    "markdown-preview": {
+      "title": "Markdown 미리보기",
+      "desc": "마크다운을 실시간으로 렌더링합니다",
+      "inputLabel": "Markdown",
+      "previewLabel": "미리보기",
+      "placeholder": "# 제목\n\n**굵게** *기울임*\n\n- 목록 항목"
+    },
+    "html-escape": {
+      "title": "HTML Escape",
+      "desc": "<>&등 특수문자를 HTML 엔티티로 변환합니다",
+      "escape": "이스케이프",
+      "unescape": "언이스케이프",
+      "input": "원본",
+      "output": "결과",
+      "placeholder": "텍스트를 입력하세요...",
+      "outputPlaceholder": "결과가 여기에 표시됩니다",
+      "copy": "복사",
+      "copied": "복사됨!"
+    },
+    "csv-to-json": {
+      "title": "CSV → JSON",
+      "desc": "CSV 파일을 JSON으로 변환합니다",
+      "delimiterLabel": "구분자",
+      "comma": "쉼표 (,)",
+      "tab": "탭",
+      "semicolon": "세미콜론 (;)",
+      "headerRow": "첫 줄을 헤더로 사용",
+      "input": "CSV",
+      "output": "JSON",
+      "placeholder": "CSV를 붙여넣으세요...",
+      "outputPlaceholder": "JSON이 여기에 표시됩니다",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "rows": "행",
+      "cols": "열"
+    },
+    "diff-checker": {
+      "title": "텍스트 비교 (Diff)",
+      "desc": "두 텍스트의 차이점을 시각화합니다",
+      "original": "원본",
+      "modified": "수정본",
+      "result": "비교 결과",
+      "placeholder": "텍스트를 입력하세요...",
+      "added": "추가",
+      "removed": "삭제",
+      "unchanged": "동일",
+      "noChanges": "두 텍스트가 동일합니다",
+      "emptyHint": "두 텍스트를 모두 입력하세요"
+    },
+    "random-nickname": {
+      "title": "랜덤 닉네임",
+      "desc": "한글 닉네임을 즉시 생성합니다",
+      "generate": "생성하기",
+      "copy": "복사",
+      "copied": "복사됨!",
+      "countLabel": "개수",
+      "styleLabel": "스타일",
+      "styles": {
+        "cute": "귀여운",
+        "cool": "쿨한",
+        "funny": "재미있는",
+        "nature": "자연"
+      }
+    },
+    "jpg-to-png": {
+      "title": "JPG → PNG",
+      "desc": "JPG, JPEG 이미지를 브라우저에서 바로 PNG로 변환합니다",
+      "dropTitle": "JPG 이미지를 여기에 놓으세요",
+      "dropHint": "이미지는 업로드되지 않고 이 기기에서만 변환됩니다",
+      "chooseFile": "JPG 파일 선택",
+      "converting": "이미지 변환 중...",
+      "invalidFile": "JPG 또는 JPEG 이미지를 선택하세요.",
+      "convertError": "이미지를 변환할 수 없습니다. 다른 JPG 파일을 시도해 주세요.",
+      "emptyPreview": "변환된 PNG 미리보기가 여기에 표시됩니다",
+      "dimensions": "이미지 크기",
+      "originalSize": "원본",
+      "pngSize": "PNG",
+      "change": "변화",
+      "download": "PNG 다운로드",
+      "clear": "지우기"
+    },
+    "png-to-webp": {
+      "title": "PNG → WebP",
+      "desc": "PNG 이미지를 더 작은 WebP 파일로 변환합니다",
+      "dropTitle": "PNG 이미지를 여기에 놓으세요",
+      "dropHint": "브라우저에서 로컬로 변환됩니다",
+      "chooseFile": "PNG 파일 선택",
+      "quality": "품질",
+      "converting": "이미지 변환 중...",
+      "invalidFile": "PNG 이미지를 선택하세요.",
+      "convertError": "이미지를 변환할 수 없습니다. 다른 PNG 파일을 시도해 주세요.",
+      "emptyPreview": "변환된 WebP 미리보기가 여기에 표시됩니다",
+      "dimensions": "이미지 크기",
+      "originalSize": "원본",
+      "webpSize": "WebP",
+      "reduction": "감소율",
+      "download": "WebP 다운로드",
+      "clear": "지우기"
+    },
+    "img-compress": {
+      "title": "이미지 압축",
+      "desc": "품질을 유지하며 이미지 용량을 줄입니다",
+      "dropTitle": "이미지를 여기에 놓으세요",
+      "dropHint": "JPG, PNG, WebP를 지원하며 이 기기에서만 처리됩니다",
+      "chooseFile": "이미지 선택",
+      "format": "저장 형식",
+      "quality": "품질",
+      "maxWidth": "최대 너비",
+      "maxWidthHint": "0을 입력하면 원본 너비를 유지합니다",
+      "converting": "이미지 압축 중...",
+      "invalidFile": "JPG, PNG, WebP 이미지를 선택하세요.",
+      "convertError": "이미지를 압축할 수 없습니다. 다른 파일을 시도해 주세요.",
+      "emptyPreview": "압축된 이미지 미리보기가 여기에 표시됩니다",
+      "dimensions": "이미지 크기",
+      "originalSize": "원본",
+      "compressedSize": "압축 후",
+      "reduction": "감소율",
+      "download": "다운로드",
+      "clear": "지우기"
+    },
+    "img-resize": {
+      "title": "이미지 리사이즈",
+      "desc": "픽셀·비율을 자유롭게 조정합니다",
+      "dropTitle": "이미지를 여기에 놓으세요",
+      "dropHint": "JPG, PNG, WebP를 지원하며 브라우저에서 바로 리사이즈합니다",
+      "chooseFile": "이미지 선택",
+      "width": "너비",
+      "height": "높이",
+      "lockRatio": "비율 고정",
+      "format": "저장 형식",
+      "quality": "품질",
+      "processing": "이미지 리사이즈 중...",
+      "invalidFile": "JPG, PNG, WebP 이미지를 선택하세요.",
+      "convertError": "이미지를 리사이즈할 수 없습니다. 다른 파일을 시도해 주세요.",
+      "emptyPreview": "리사이즈된 이미지 미리보기가 여기에 표시됩니다",
+      "originalDimensions": "원본 크기",
+      "newDimensions": "새 크기",
+      "originalSize": "원본 파일",
+      "outputSize": "출력 파일",
+      "reduction": "감소율",
+      "download": "다운로드",
+      "clear": "지우기"
+    },
+    "img-crop": {
+      "title": "이미지 Crop",
+      "desc": "원하는 영역을 잘라냅니다",
+      "dropTitle": "이미지를 여기에 놓으세요",
+      "dropHint": "JPG, PNG, WebP를 지원하며 브라우저에서 바로 자릅니다",
+      "chooseFile": "이미지 선택",
+      "dragHint": "이미지 위에서 드래그해 자를 영역을 선택하세요",
+      "format": "저장 형식",
+      "quality": "품질",
+      "processing": "이미지 자르는 중...",
+      "invalidFile": "JPG, PNG, WebP 이미지를 선택하세요.",
+      "convertError": "이미지를 자를 수 없습니다. 다른 파일을 시도해 주세요.",
+      "emptyPreview": "잘라낸 이미지 미리보기가 여기에 표시됩니다",
+      "originalDimensions": "원본 크기",
+      "cropDimensions": "자른 크기",
+      "originalSize": "원본 파일",
+      "outputSize": "출력 파일",
+      "reduction": "감소율",
+      "download": "다운로드",
+      "clear": "지우기"
+    },
+    "favicon-gen": {
+      "title": "Favicon 생성기",
+      "desc": "ICO, PNG, SVG favicon 파일을 생성합니다",
+      "dropTitle": "로고나 이미지를 여기에 놓으세요",
+      "dropHint": "JPG, PNG, WebP, SVG를 지원하며 이 기기에서 바로 생성됩니다",
+      "chooseFile": "이미지 선택",
+      "padding": "여백",
+      "transparent": "투명 배경",
+      "background": "배경색",
+      "processing": "favicon 파일 생성 중...",
+      "invalidFile": "JPG, PNG, WebP, SVG 이미지를 선택하세요.",
+      "convertError": "favicon 파일을 생성할 수 없습니다. 다른 이미지를 시도해 주세요.",
+      "emptyPreview": "생성된 favicon 파일이 여기에 표시됩니다",
+      "downloadAll": "전체 파일 다운로드",
+      "markup": "권장 HTML",
+      "clear": "지우기"
+    },
+    "img-blur": {
+      "title": "이미지 블러",
+      "desc": "전체 또는 영역에 가우시안 블러를 적용합니다",
+      "dropTitle": "이미지를 여기에 놓으세요",
+      "dropHint": "JPG, PNG, WebP를 지원하며 브라우저에서 바로 블러 처리합니다",
+      "chooseFile": "이미지 선택",
+      "mode": "블러 방식",
+      "modes": {
+        "full": "전체 이미지",
+        "area": "선택 영역"
+      },
+      "radius": "블러 강도",
+      "format": "저장 형식",
+      "quality": "품질",
+      "fullHint": "이미지 전체에 블러가 적용됩니다",
+      "dragHint": "이미지 위에서 드래그해 블러 처리할 영역을 선택하세요",
+      "processing": "블러 적용 중...",
+      "invalidFile": "JPG, PNG, WebP 이미지를 선택하세요.",
+      "convertError": "이미지에 블러를 적용할 수 없습니다. 다른 파일을 시도해 주세요.",
+      "emptyPreview": "블러 처리된 이미지 미리보기가 여기에 표시됩니다",
+      "dimensions": "이미지 크기",
+      "originalSize": "원본 파일",
+      "outputSize": "출력 파일",
+      "reduction": "감소율",
+      "download": "다운로드",
+      "clear": "지우기"
+    },
+    "img-rotate": {
+      "title": "이미지 회전/뒤집기",
+      "desc": "90°·180°·좌우 반전",
+      "dropTitle": "이미지를 여기에 놓으세요",
+      "dropHint": "JPG, PNG, WebP를 지원하며 브라우저에서 바로 회전합니다",
+      "chooseFile": "이미지 선택",
+      "rotateLeft": "왼쪽 회전",
+      "rotateRight": "오른쪽 회전",
+      "flipHorizontal": "좌우 반전",
+      "flipVertical": "상하 반전",
+      "resetTransform": "회전/반전 초기화",
+      "format": "저장 형식",
+      "quality": "품질",
+      "processing": "이미지 처리 중...",
+      "invalidFile": "JPG, PNG, WebP 이미지를 선택하세요.",
+      "convertError": "이미지를 회전할 수 없습니다. 다른 파일을 시도해 주세요.",
+      "emptyPreview": "회전된 이미지 미리보기가 여기에 표시됩니다",
+      "originalDimensions": "원본 크기",
+      "outputDimensions": "출력 크기",
+      "originalSize": "원본 파일",
+      "outputSize": "출력 파일",
+      "reduction": "감소율",
+      "download": "다운로드",
+      "clear": "지우기"
+    },
+    "img-size-reduce": {
+      "title": "이미지 용량 줄이기",
+      "desc": "KB 목표치를 설정해 압축합니다",
+      "dropTitle": "이미지를 여기에 놓으세요",
+      "dropHint": "JPG, PNG, WebP를 지원하며 목표 용량에 맞춰 자동 압축합니다",
+      "chooseFile": "이미지 선택",
+      "targetKb": "목표 용량 (KB)",
+      "format": "저장 형식",
+      "minQuality": "최소 품질",
+      "processing": "이미지 용량 줄이는 중...",
+      "invalidFile": "JPG, PNG, WebP 이미지를 선택하세요.",
+      "convertError": "이미지 용량을 줄일 수 없습니다. 다른 파일을 시도해 주세요.",
+      "emptyPreview": "용량이 줄어든 이미지 미리보기가 여기에 표시됩니다",
+      "originalDimensions": "원본 크기",
+      "outputDimensions": "출력 크기",
+      "originalSize": "원본 파일",
+      "outputSize": "출력 파일",
+      "qualityUsed": "적용 품질",
+      "reduction": "감소율",
+      "download": "다운로드",
+      "clear": "지우기"
+    },
+    "percent-calc": {
+      "title": "퍼센트 계산기",
+      "desc": "할인율·증감률·비율을 계산합니다"
+    },
+    "date-calc": {
+      "title": "날짜 계산기",
+      "desc": "D-day·기간·요일을 계산합니다"
+    },
+    "time-diff-calc": {
+      "title": "시간 차 계산기",
+      "desc": "두 시각 사이의 시간을 계산합니다"
+    },
+    "bmi-calc": {
+      "title": "BMI 계산기",
+      "desc": "체질량지수와 체중 범위를 계산합니다"
+    },
+    "average-calc": {
+      "title": "평균 계산기",
+      "desc": "평균·중앙값·최빈값을 계산합니다"
+    },
+    "gpa-calc": {
+      "title": "GPA 계산기",
+      "desc": "4.0·4.3·4.5 학점을 모두 지원합니다"
+    },
+    "salary-calc": {
+      "title": "연봉 실수령 계산기",
+      "desc": "세금·4대보험을 자동으로 계산합니다"
+    },
+    "hourly-calc": {
+      "title": "시급 계산기",
+      "desc": "주휴수당·초과근무 수당을 포함합니다"
+    },
+    "vat-calc": {
+      "title": "VAT 계산기",
+      "desc": "부가세 포함·별도·역산을 계산합니다"
+    },
+    "currency-calc": {
+      "title": "환율 계산기",
+      "desc": "실시간 환율 API와 연동합니다"
+    },
+    "compound-calc": {
+      "title": "복리 계산기",
+      "desc": "원금·이율·기간으로 결과를 계산합니다"
+    },
+    "loan-calc": {
+      "title": "대출 계산기",
+      "desc": "원리금·원금균등 상환을 계산합니다"
+    },
+    "baseball-stats": {
+      "title": "야구 스탯 계산기",
+      "desc": "타율·OPS·ERA를 한 번에 계산합니다"
+    },
+    "youtube-earnings": {
+      "title": "유튜브 수익 계산기",
+      "desc": "조회수·CPM으로 예상 수익을 계산합니다"
+    },
+    "instagram-engagement": {
+      "title": "인스타 인게이지먼트",
+      "desc": "팔로워 대비 참여율을 계산합니다"
+    },
+    "ad-cpm-calc": {
+      "title": "광고 CPM 계산기",
+      "desc": "CPM·CPC·ROAS를 변환합니다"
+    },
+    "ai-token-calc": {
+      "title": "AI 토큰 계산기",
+      "desc": "GPT·Claude 토큰 및 비용을 추산합니다"
+    },
+    "video-bitrate-calc": {
+      "title": "영상 bitrate 계산기",
+      "desc": "해상도·fps·용량을 추산합니다"
+    },
+    "subtitle-timestamp": {
+      "title": "자막 타임코드 변환기",
+      "desc": "SRT ↔ VTT 타임코드를 변환합니다"
+    },
+    "filename-organizer": {
+      "title": "파일명 정리기",
+      "desc": "일괄 rename 규칙을 미리봅니다"
+    },
+    "name-gen": {
+      "title": "이름 생성기",
+      "desc": "한국어 이름을 랜덤으로 생성합니다"
+    },
+    "company-name-gen": {
+      "title": "회사명 생성기",
+      "desc": "업종별 브랜드명을 생성합니다"
+    },
+    "nickname-gen": {
+      "title": "닉네임 생성기",
+      "desc": "게임·SNS 닉네임을 생성합니다"
+    },
+    "mbti-compatibility": {
+      "title": "MBTI 궁합",
+      "desc": "16가지 유형별 궁합표"
+    },
+    "random-lottery": {
+      "title": "랜덤 추첨기",
+      "desc": "이름 목록을 넣고 추첨합니다"
+    },
+    "roulette": {
+      "title": "룰렛",
+      "desc": "항목을 추가하고 돌립니다"
+    },
+    "ladder-game": {
+      "title": "사다리타기",
+      "desc": "n명 사다리를 자동 생성합니다"
+    },
+    "team-divider": {
+      "title": "팀 나누기",
+      "desc": "n팀으로 랜덤 배분합니다"
+    },
+    "random-number-gen": {
+      "title": "랜덤 숫자 생성기",
+      "desc": "범위·개수·중복 여부를 설정합니다"
+    },
+    "regex-tester": {
+      "title": "정규식 테스터",
+      "desc": "Regex 실시간 매칭을 확인합니다"
+    },
+    "hash-gen": {
+      "title": "해시 생성기",
+      "desc": "MD5·SHA-1·SHA-256을 생성합니다"
+    },
+    "uuid-gen": {
+      "title": "UUID 생성기",
+      "desc": "v4 UUID를 즉시 생성하고 복사합니다"
+    },
+    "base-converter": {
+      "title": "진법 변환기",
+      "desc": "2·8·10·16진수를 변환합니다"
+    },
+    "unix-timestamp": {
+      "title": "Unix timestamp 변환",
+      "desc": "타임스탬프 ↔ 날짜를 변환합니다"
+    },
+    "yaml-json-converter": {
+      "title": "YAML ↔ JSON 변환",
+      "desc": "설정파일 포맷을 변환합니다"
+    },
+    "json-to-csv": {
+      "title": "JSON → CSV 변환",
+      "desc": "역방향(CSV→JSON)도 지원합니다"
+    },
+    "image-to-base64": {
+      "title": "이미지 → Base64",
+      "desc": "이미지 파일을 data URI로 변환합니다"
+    },
+    "robots-txt-gen": {
+      "title": "robots.txt 생성기",
+      "desc": "허용·차단 규칙을 GUI로 생성합니다"
+    },
+    "lorem-ipsum-gen": {
+      "title": "Lorem Ipsum 생성기",
+      "desc": "단어·문장·단락 수를 지정합니다"
+    },
+    "css-shadow-gen": {
+      "title": "CSS 그림자 생성기",
+      "desc": "box-shadow를 드래그로 생성합니다"
+    },
+    "css-gradient-gen": {
+      "title": "CSS 그라디언트 생성기",
+      "desc": "linear·radial 코드를 복사합니다"
+    },
+    "font-preview": {
+      "title": "폰트 미리보기",
+      "desc": "구글폰트를 실시간으로 렌더링합니다"
+    },
+    "color-palette-gen": {
+      "title": "색상 팔레트 생성기",
+      "desc": "이미지에서 주요 색을 추출합니다"
+    },
+    "aspect-ratio-calc": {
+      "title": "Aspect ratio 계산기",
+      "desc": "16:9·4:3 등 비율을 계산합니다"
+    },
+    "barcode-gen": {
+      "title": "바코드 생성기",
+      "desc": "EAN-13·Code128·QR을 생성합니다"
+    },
+    "number-to-korean": {
+      "title": "숫자 → 한글 변환",
+      "desc": "123 → 백이십삼·일이삼 변환"
+    },
+    "consonant-extractor": {
+      "title": "초성 추출기",
+      "desc": "한글 텍스트에서 초성만 추출합니다"
+    },
+    "manuscript-calc": {
+      "title": "원고지 계산기",
+      "desc": "400자·200자 원고지 매수를 계산합니다"
+    },
+    "pomodoro-timer": {
+      "title": "포모도로 타이머",
+      "desc": "25분 집중·5분 휴식 사이클"
+    },
+    "stopwatch": {
+      "title": "스톱워치",
+      "desc": "랩 기록·공유 기능"
+    },
+    "timezone-converter": {
+      "title": "시간대 변환기",
+      "desc": "세계 도시 시각을 동시 표시합니다"
+    },
+    "checklist-gen": {
+      "title": "체크리스트 생성기",
+      "desc": "공유 가능한 URL 체크리스트"
+    },
+    "unit-converter": {
+      "title": "단위 변환기",
+      "desc": "길이·무게·온도·넓이를 변환합니다"
+    },
+    "celsius-fahrenheit": {
+      "title": "섭씨 ↔ 화씨 변환",
+      "desc": "°C ↔ °F 실시간 변환"
+    },
+    "emoji-search": {
+      "title": "이모지 검색기",
+      "desc": "키워드로 이모지를 찾아 복사합니다"
+    },
+    "special-chars": {
+      "title": "특수문자 모음",
+      "desc": "화살표·기호·수학 기호 모음"
+    },
+    "grayscale-image": {
+      "title": "사진 흑백 변환기",
+      "desc": "사진을 흑백(그레이스케일) 이미지로 변환합니다",
+      "dropTitle": "이미지를 여기에 놓으세요",
+      "dropHint": "JPG, PNG, WebP를 지원하며 브라우저에서 바로 변환합니다",
+      "chooseFile": "이미지 선택",
+      "format": "저장 형식",
+      "quality": "품질",
+      "processing": "변환 중...",
+      "invalidFile": "JPG, PNG, WebP 이미지를 선택하세요.",
+      "convertError": "이미지를 변환할 수 없습니다. 다른 파일을 시도해 주세요.",
+      "emptyPreview": "변환된 이미지 미리보기가 여기에 표시됩니다",
+      "dimensions": "이미지 크기",
+      "originalSize": "원본 파일",
+      "outputSize": "출력 파일",
+      "reduction": "감소율",
+      "download": "다운로드",
+      "clear": "지우기"
+    },
+    "lived-days-calc": {
+      "title": "살아온 날짜 계산기",
+      "desc": "태어난 날부터 오늘까지 살아온 날짜를 계산합니다"
+    },
+    "year-days-left": {
+      "title": "올해 남은 날짜 계산기",
+      "desc": "올해가 며칠 남았는지 계산합니다"
+    },
+    "anniversary-calc": {
+      "title": "기념일 계산기",
+      "desc": "기념일과 경과 일수를 계산합니다"
+    },
+    "shoe-size-converter": {
+      "title": "국제 신발 사이즈 변환기",
+      "desc": "한국·미국·영국·유럽·일본 신발 사이즈를 변환합니다"
+    },
+    "clothing-size-converter": {
+      "title": "국제 의류 사이즈 변환기",
+      "desc": "국가별 의류 사이즈를 변환합니다"
+    },
+    "dog-human-age": {
+      "title": "강아지 인간 나이 변환기",
+      "desc": "강아지 나이를 사람 나이로 환산합니다"
+    },
+    "cat-human-age": {
+      "title": "고양이 인간 나이 변환기",
+      "desc": "고양이 나이를 사람 나이로 환산합니다"
+    },
+    "coin-flip": {
+      "title": "동전 던지기",
+      "desc": "가상 동전을 던져 앞면 또는 뒷면을 뽑습니다"
+    },
+    "current-ip-checker": {
+      "title": "현재 IP 확인하기",
+      "desc": "현재 접속 중인 공인 IP 주소를 확인합니다"
+    },
+    "random-color-combo": {
+      "title": "랜덤 컬러 조합 생성기",
+      "desc": "무작위 색상 팔레트와 조합을 생성합니다"
+    },
+    "korean-age-calc": {
+      "title": "만 나이 계산기",
+      "desc": "생년월일로 현재 만 나이를 계산합니다"
+    },
+    "real-estate-fee-calc": {
+      "title": "부동산 중개보수 복비 계산기",
+      "desc": "거래 유형과 금액으로 중개보수를 계산합니다"
+    },
+    "severance-pay-calc": {
+      "title": "퇴직금 계산기",
+      "desc": "근속 기간과 평균임금으로 퇴직금을 추정합니다"
+    },
+    "unemployment-benefit-calc": {
+      "title": "실업급여 계산기",
+      "desc": "실업급여 예상 금액과 지급 기간을 계산합니다"
+    },
+    "korean-address-converter": {
+      "title": "영문 주소 한글 주소 변환",
+      "desc": "영문 주소와 한글 주소 변환을 도와줍니다"
+    },
+    "memorial-49-calc": {
+      "title": "49재 날짜 계산기",
+      "desc": "사망일 기준 49재 날짜를 계산합니다"
+    },
+    "workday-countdown": {
+      "title": "퇴근까지 카운트다운 시계",
+      "desc": "퇴근 시간까지 남은 시간을 보여줍니다"
+    },
+    "fullscreen-clock": {
+      "title": "현재 시간 전체 화면",
+      "desc": "현재 시간을 큰 화면으로 표시합니다"
+    },
+    "online-scoreboard": {
+      "title": "온라인 스코어 보드",
+      "desc": "야구, 축구, 공통 경기용 점수판을 만듭니다"
+    },
+    "latitude-longitude-finder": {
+      "title": "경도 위도 알려주는 도구",
+      "desc": "장소나 주소의 위도와 경도를 확인합니다"
+    }
+  },
+  "toolPage": {
+    "back": "← 목록으로",
+    "tryIt": "사용해보기"
+  },
+  "footer": {
+    "tagline": "설치 없이 바로 사용하세요",
+    "tools": "툴 목록",
+    "about": "소개",
+    "rights": "All rights reserved."
+  }
+}

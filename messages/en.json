@@ -1,0 +1,818 @@
+{
+  "nav": {
+    "home": "Home",
+    "langToggle": "KR",
+    "darkMode": "Dark Mode"
+  },
+  "home": {
+    "title": "All Your Favorite Tools, One Place",
+    "subtitle": "No install · Use instantly",
+    "search": "Search tools...",
+    "toolCount": " tools",
+    "free": "100% Free",
+    "comingSoon": "Coming Soon",
+    "noResults": "No results found",
+    "categories": {
+      "all": "All",
+      "text": "Text",
+      "image": "Image",
+      "calc": "Calculator",
+      "niche": "Niche",
+      "generator": "Generator",
+      "dev": "Developer",
+      "design": "Design",
+      "kr": "Korea",
+      "productivity": "Productivity"
+    }
+  },
+  "tools": {
+    "char-count": {
+      "title": "Character Counter",
+      "desc": "Count characters, words, and lines in real time",
+      "placeholder": "Type or paste your text here...",
+      "charsFull": "Characters",
+      "wordsFull": "Words",
+      "linesFull": "Lines",
+      "bytesFull": "Bytes",
+      "clear": "Clear",
+      "excludeSpaces": "Exclude spaces"
+    },
+    "json-format": {
+      "title": "JSON Formatter",
+      "desc": "Format, validate, and minify JSON instantly",
+      "placeholder": "Paste your JSON here...",
+      "format": "Format",
+      "minify": "Minify",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "errorPrefix": "Error: ",
+      "indent": "Indent",
+      "spaces": " spaces"
+    },
+    "password-gen": {
+      "title": "Password Generator",
+      "desc": "Generate strong random passwords instantly",
+      "length": "Length",
+      "uppercase": "Uppercase (A-Z)",
+      "lowercase": "Lowercase (a-z)",
+      "numbers": "Numbers (0-9)",
+      "symbols": "Symbols (!@#$...)",
+      "generate": "Regenerate",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "strength": "Strength",
+      "weak": "Weak",
+      "medium": "Medium",
+      "strong": "Strong",
+      "veryStrong": "Very Strong"
+    },
+    "qr-code": {
+      "title": "QR Code Generator",
+      "desc": "Convert URLs or text to QR codes instantly",
+      "placeholder": "Enter URL or text...",
+      "download": "Save PNG",
+      "size": "Size",
+      "errorLevel": "Error Correction",
+      "levels": {
+        "L": "Low (L)",
+        "M": "Medium (M)",
+        "Q": "High (Q)",
+        "H": "Max (H)"
+      }
+    },
+    "color-converter": {
+      "title": "Color Code Converter",
+      "desc": "Convert between HEX, RGB, and HSL color codes",
+      "hex": "HEX",
+      "rgb": "RGB",
+      "hsl": "HSL",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "preview": "Color Preview",
+      "red": "R",
+      "green": "G",
+      "blue": "B",
+      "hue": "H",
+      "saturation": "S",
+      "lightness": "L",
+      "invalidHex": "Enter a valid HEX code (#RRGGBB)"
+    },
+    "mobile-line-break": {
+      "title": "Mobile Line Breaker",
+      "desc": "Auto line-break text to fit mobile screen width",
+      "width": "Chars per line",
+      "cjkDouble": "Count CJK chars as 2",
+      "input": "Input Text",
+      "output": "Output",
+      "placeholder": "Paste your text here...",
+      "outputPlaceholder": "Line-broken result will appear here",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "lineUnit": " lines"
+    },
+    "whitespace-remove": {
+      "title": "Whitespace Remover",
+      "desc": "Remove leading, trailing, and duplicate spaces",
+      "modeLabel": "Mode",
+      "modes": {
+        "trim": "Trim leading & trailing",
+        "collapse": "Collapse multiple spaces",
+        "trimCollapse": "Trim + collapse spaces",
+        "removeAll": "Remove all spaces",
+        "trimLines": "Trim each line"
+      },
+      "input": "Input",
+      "output": "Output",
+      "placeholder": "Paste your text here...",
+      "outputPlaceholder": "Result will appear here",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "newline-remove": {
+      "title": "Newline Remover",
+      "desc": "Remove or convert line breaks",
+      "modeLabel": "Mode",
+      "modes": {
+        "removeAll": "Remove all (one line)",
+        "replaceSpace": "Replace with space",
+        "collapseBlank": "Collapse consecutive blank lines",
+        "removeBlank": "Remove blank lines only",
+        "crlf2lf": "CRLF → LF",
+        "lf2crlf": "LF → CRLF",
+        "custom": "Custom replacement"
+      },
+      "customLabel": "Replace with",
+      "customPlaceholder": "e.g.  ,  or  <br>",
+      "input": "Input",
+      "output": "Output",
+      "placeholder": "Paste your text here...",
+      "outputPlaceholder": "Converted result will appear here",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "case-converter": {
+      "title": "Case Converter",
+      "desc": "Convert to UPPER / lower / Title Case",
+      "modeLabel": "Mode",
+      "modes": {
+        "upper": "UPPERCASE",
+        "lower": "lowercase",
+        "title": "Title Case",
+        "sentence": "Sentence case",
+        "camel": "camelCase",
+        "pascal": "PascalCase",
+        "snake": "snake_case",
+        "kebab": "kebab-case",
+        "screaming": "SCREAMING_SNAKE"
+      },
+      "input": "Input",
+      "output": "Output",
+      "placeholder": "Paste your text here...",
+      "outputPlaceholder": "Converted result will appear here",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "slug-generator": {
+      "title": "Slug Generator",
+      "desc": "Convert text to URL-friendly slugs",
+      "separatorLabel": "Separator",
+      "hyphen": "Hyphen (-)",
+      "underscore": "Underscore (_)",
+      "koreanLabel": "Korean chars",
+      "koreanModes": {
+        "unicode": "Keep as Unicode",
+        "remove": "Remove"
+      },
+      "resultLabel": "Slug",
+      "placeholder": "Enter text to convert...",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "url-encoder": {
+      "title": "URL Encoder/Decoder",
+      "desc": "Percent-encode special characters",
+      "encode": "Encode",
+      "decode": "Decode",
+      "input": "Input",
+      "output": "Output",
+      "placeholder": "Enter text...",
+      "outputPlaceholder": "Result will appear here",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "error": "Decode error: invalid percent-encoded string"
+    },
+    "base64-converter": {
+      "title": "Base64 Converter",
+      "desc": "Encode and decode Base64 strings",
+      "encode": "Encode",
+      "decode": "Decode",
+      "input": "Input",
+      "output": "Output",
+      "placeholder": "Enter text...",
+      "outputPlaceholder": "Result will appear here",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "error": "Decode error: not a valid Base64 string"
+    },
+    "json-validator": {
+      "title": "JSON Validator",
+      "desc": "Find and highlight JSON syntax errors",
+      "placeholder": "Paste your JSON here...",
+      "valid": "Valid JSON",
+      "invalid": "Syntax Error",
+      "keys": "keys",
+      "size": "size",
+      "depth": "depth",
+      "copy": "Copy Formatted",
+      "copied": "Copied!"
+    },
+    "markdown-preview": {
+      "title": "Markdown Preview",
+      "desc": "Live preview of Markdown rendering",
+      "inputLabel": "Markdown",
+      "previewLabel": "Preview",
+      "placeholder": "# Heading\n\n**bold** *italic*\n\n- List item"
+    },
+    "html-escape": {
+      "title": "HTML Escape",
+      "desc": "Escape/unescape HTML special characters",
+      "escape": "Escape",
+      "unescape": "Unescape",
+      "input": "Input",
+      "output": "Output",
+      "placeholder": "Enter text...",
+      "outputPlaceholder": "Result will appear here",
+      "copy": "Copy",
+      "copied": "Copied!"
+    },
+    "csv-to-json": {
+      "title": "CSV → JSON",
+      "desc": "Convert CSV files to JSON format",
+      "delimiterLabel": "Delimiter",
+      "comma": "Comma (,)",
+      "tab": "Tab",
+      "semicolon": "Semicolon (;)",
+      "headerRow": "First row as header",
+      "input": "CSV",
+      "output": "JSON",
+      "placeholder": "Paste CSV here...",
+      "outputPlaceholder": "JSON will appear here",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "rows": "rows",
+      "cols": "cols"
+    },
+    "diff-checker": {
+      "title": "Diff Checker",
+      "desc": "Visualize differences between two texts",
+      "original": "Original",
+      "modified": "Modified",
+      "result": "Diff Result",
+      "placeholder": "Enter text...",
+      "added": "added",
+      "removed": "removed",
+      "unchanged": "unchanged",
+      "noChanges": "Both texts are identical",
+      "emptyHint": "Enter text in both panels"
+    },
+    "random-nickname": {
+      "title": "Random Nickname",
+      "desc": "Generate random Korean nicknames",
+      "generate": "Generate",
+      "copy": "Copy",
+      "copied": "Copied!",
+      "countLabel": "Count",
+      "styleLabel": "Style",
+      "styles": {
+        "cute": "Cute",
+        "cool": "Cool",
+        "funny": "Funny",
+        "nature": "Nature"
+      }
+    },
+    "jpg-to-png": {
+      "title": "JPG → PNG",
+      "desc": "Convert JPG and JPEG images to PNG in your browser",
+      "dropTitle": "Drop a JPG image here",
+      "dropHint": "Your image stays on this device and is converted locally",
+      "chooseFile": "Choose JPG file",
+      "converting": "Converting image...",
+      "invalidFile": "Please choose a JPG or JPEG image.",
+      "convertError": "Could not convert this image. Try another JPG file.",
+      "emptyPreview": "Converted PNG preview will appear here",
+      "dimensions": "Dimensions",
+      "originalSize": "Original",
+      "pngSize": "PNG",
+      "change": "Change",
+      "download": "Download PNG",
+      "clear": "Clear"
+    },
+    "png-to-webp": {
+      "title": "PNG → WebP",
+      "desc": "Convert PNG images to smaller WebP files",
+      "dropTitle": "Drop a PNG image here",
+      "dropHint": "Converted locally in your browser",
+      "chooseFile": "Choose PNG file",
+      "quality": "Quality",
+      "converting": "Converting image...",
+      "invalidFile": "Please choose a PNG image.",
+      "convertError": "Could not convert this image. Try another PNG file.",
+      "emptyPreview": "Converted WebP preview will appear here",
+      "dimensions": "Dimensions",
+      "originalSize": "Original",
+      "webpSize": "WebP",
+      "reduction": "Reduction",
+      "download": "Download WebP",
+      "clear": "Clear"
+    },
+    "img-compress": {
+      "title": "Image Compressor",
+      "desc": "Reduce file size while keeping quality",
+      "dropTitle": "Drop an image here",
+      "dropHint": "Supports JPG, PNG, and WebP. Processing stays on this device",
+      "chooseFile": "Choose image",
+      "format": "Output format",
+      "quality": "Quality",
+      "maxWidth": "Max width",
+      "maxWidthHint": "Use 0 to keep the original width",
+      "converting": "Compressing image...",
+      "invalidFile": "Please choose a JPG, PNG, or WebP image.",
+      "convertError": "Could not compress this image. Try another file.",
+      "emptyPreview": "Compressed image preview will appear here",
+      "dimensions": "Dimensions",
+      "originalSize": "Original",
+      "compressedSize": "Compressed",
+      "reduction": "Reduction",
+      "download": "Download",
+      "clear": "Clear"
+    },
+    "img-resize": {
+      "title": "Image Resizer",
+      "desc": "Resize images by pixels or percentage",
+      "dropTitle": "Drop an image here",
+      "dropHint": "Supports JPG, PNG, and WebP. Resize locally in your browser",
+      "chooseFile": "Choose image",
+      "width": "Width",
+      "height": "Height",
+      "lockRatio": "Lock aspect ratio",
+      "format": "Output format",
+      "quality": "Quality",
+      "processing": "Resizing image...",
+      "invalidFile": "Please choose a JPG, PNG, or WebP image.",
+      "convertError": "Could not resize this image. Try another file.",
+      "emptyPreview": "Resized image preview will appear here",
+      "originalDimensions": "Original",
+      "newDimensions": "New size",
+      "originalSize": "Original file",
+      "outputSize": "Output file",
+      "reduction": "Reduction",
+      "download": "Download",
+      "clear": "Clear"
+    },
+    "img-crop": {
+      "title": "Image Crop",
+      "desc": "Crop any region of your image",
+      "dropTitle": "Drop an image here",
+      "dropHint": "Supports JPG, PNG, and WebP. Crop locally in your browser",
+      "chooseFile": "Choose image",
+      "dragHint": "Drag across the image to select a crop area",
+      "format": "Output format",
+      "quality": "Quality",
+      "processing": "Cropping image...",
+      "invalidFile": "Please choose a JPG, PNG, or WebP image.",
+      "convertError": "Could not crop this image. Try another file.",
+      "emptyPreview": "Cropped image preview will appear here",
+      "originalDimensions": "Original",
+      "cropDimensions": "Crop size",
+      "originalSize": "Original file",
+      "outputSize": "Output file",
+      "reduction": "Reduction",
+      "download": "Download",
+      "clear": "Clear"
+    },
+    "favicon-gen": {
+      "title": "Favicon Generator",
+      "desc": "Generate ICO, PNG, and SVG favicon files",
+      "dropTitle": "Drop a logo or image here",
+      "dropHint": "Supports JPG, PNG, WebP, and SVG. Everything is generated locally",
+      "chooseFile": "Choose image",
+      "padding": "Padding",
+      "transparent": "Transparent background",
+      "background": "Background color",
+      "processing": "Generating favicon files...",
+      "invalidFile": "Please choose a JPG, PNG, WebP, or SVG image.",
+      "convertError": "Could not generate favicon files. Try another image.",
+      "emptyPreview": "Generated favicon files will appear here",
+      "downloadAll": "Download all files",
+      "markup": "Recommended HTML",
+      "clear": "Clear"
+    },
+    "img-blur": {
+      "title": "Image Blur",
+      "desc": "Apply Gaussian blur to images",
+      "dropTitle": "Drop an image here",
+      "dropHint": "Supports JPG, PNG, and WebP. Blur locally in your browser",
+      "chooseFile": "Choose image",
+      "mode": "Blur mode",
+      "modes": {
+        "full": "Full image",
+        "area": "Selected area"
+      },
+      "radius": "Blur radius",
+      "format": "Output format",
+      "quality": "Quality",
+      "fullHint": "The full image will be blurred",
+      "dragHint": "Drag across the image to choose the area to blur",
+      "processing": "Applying blur...",
+      "invalidFile": "Please choose a JPG, PNG, or WebP image.",
+      "convertError": "Could not blur this image. Try another file.",
+      "emptyPreview": "Blurred image preview will appear here",
+      "dimensions": "Dimensions",
+      "originalSize": "Original file",
+      "outputSize": "Output file",
+      "reduction": "Reduction",
+      "download": "Download",
+      "clear": "Clear"
+    },
+    "img-rotate": {
+      "title": "Image Rotate/Flip",
+      "desc": "Rotate 90°/180° or flip images",
+      "dropTitle": "Drop an image here",
+      "dropHint": "Supports JPG, PNG, and WebP. Rotate locally in your browser",
+      "chooseFile": "Choose image",
+      "rotateLeft": "Rotate left",
+      "rotateRight": "Rotate right",
+      "flipHorizontal": "Flip horizontal",
+      "flipVertical": "Flip vertical",
+      "resetTransform": "Reset rotation and flips",
+      "format": "Output format",
+      "quality": "Quality",
+      "processing": "Processing image...",
+      "invalidFile": "Please choose a JPG, PNG, or WebP image.",
+      "convertError": "Could not rotate this image. Try another file.",
+      "emptyPreview": "Rotated image preview will appear here",
+      "originalDimensions": "Original",
+      "outputDimensions": "Output",
+      "originalSize": "Original file",
+      "outputSize": "Output file",
+      "reduction": "Reduction",
+      "download": "Download",
+      "clear": "Clear"
+    },
+    "img-size-reduce": {
+      "title": "Image Size Reducer",
+      "desc": "Compress to a target KB size",
+      "dropTitle": "Drop an image here",
+      "dropHint": "Supports JPG, PNG, and WebP. Finds a smaller file automatically",
+      "chooseFile": "Choose image",
+      "targetKb": "Target size (KB)",
+      "format": "Output format",
+      "minQuality": "Minimum quality",
+      "processing": "Reducing image size...",
+      "invalidFile": "Please choose a JPG, PNG, or WebP image.",
+      "convertError": "Could not reduce this image. Try another file.",
+      "emptyPreview": "Reduced image preview will appear here",
+      "originalDimensions": "Original",
+      "outputDimensions": "Output",
+      "originalSize": "Original file",
+      "outputSize": "Output file",
+      "qualityUsed": "Quality used",
+      "reduction": "Reduction",
+      "download": "Download",
+      "clear": "Clear"
+    },
+    "percent-calc": {
+      "title": "Percentage Calculator",
+      "desc": "Calculate discounts, rates, and ratios"
+    },
+    "date-calc": {
+      "title": "Date Calculator",
+      "desc": "Calculate D-day, duration, and weekdays"
+    },
+    "time-diff-calc": {
+      "title": "Time Difference Calculator",
+      "desc": "Calculate time between two moments"
+    },
+    "bmi-calc": {
+      "title": "BMI Calculator",
+      "desc": "Calculate body mass index and weight range"
+    },
+    "average-calc": {
+      "title": "Average Calculator",
+      "desc": "Mean, median, and mode calculator"
+    },
+    "gpa-calc": {
+      "title": "GPA Calculator",
+      "desc": "Supports 4.0, 4.3, and 4.5 scales"
+    },
+    "salary-calc": {
+      "title": "Salary Calculator",
+      "desc": "Calculate take-home pay after taxes"
+    },
+    "hourly-calc": {
+      "title": "Hourly Wage Calculator",
+      "desc": "Including overtime and weekly allowances"
+    },
+    "vat-calc": {
+      "title": "VAT Calculator",
+      "desc": "Calculate VAT inclusive/exclusive/reverse"
+    },
+    "currency-calc": {
+      "title": "Currency Converter",
+      "desc": "Live exchange rate conversion"
+    },
+    "compound-calc": {
+      "title": "Compound Interest Calculator",
+      "desc": "Calculate compound growth"
+    },
+    "loan-calc": {
+      "title": "Loan Calculator",
+      "desc": "Equal principal/payment repayment plans"
+    },
+    "baseball-stats": {
+      "title": "Baseball Stats Calculator",
+      "desc": "Calculate batting average, OPS, and ERA"
+    },
+    "youtube-earnings": {
+      "title": "YouTube Earnings Calculator",
+      "desc": "Estimate earnings from views and CPM"
+    },
+    "instagram-engagement": {
+      "title": "Instagram Engagement Rate",
+      "desc": "Calculate engagement vs. followers"
+    },
+    "ad-cpm-calc": {
+      "title": "Ad CPM Calculator",
+      "desc": "Convert CPM, CPC, and ROAS"
+    },
+    "ai-token-calc": {
+      "title": "AI Token Calculator",
+      "desc": "Estimate GPT/Claude tokens and costs"
+    },
+    "video-bitrate-calc": {
+      "title": "Video Bitrate Calculator",
+      "desc": "Estimate file size from resolution/fps"
+    },
+    "subtitle-timestamp": {
+      "title": "Subtitle Timestamp Converter",
+      "desc": "Convert SRT ↔ VTT timecodes"
+    },
+    "filename-organizer": {
+      "title": "Filename Organizer",
+      "desc": "Preview bulk rename rules"
+    },
+    "name-gen": {
+      "title": "Name Generator",
+      "desc": "Generate random Korean names"
+    },
+    "company-name-gen": {
+      "title": "Company Name Generator",
+      "desc": "Generate brand names by industry"
+    },
+    "nickname-gen": {
+      "title": "Nickname Generator",
+      "desc": "Generate nicknames for games and SNS"
+    },
+    "mbti-compatibility": {
+      "title": "MBTI Compatibility",
+      "desc": "Compatibility chart for all 16 types"
+    },
+    "random-lottery": {
+      "title": "Random Lottery",
+      "desc": "Draw names from a list"
+    },
+    "roulette": {
+      "title": "Roulette",
+      "desc": "Add items and spin the wheel"
+    },
+    "ladder-game": {
+      "title": "Ladder Game",
+      "desc": "Auto-generate a ladder for n players"
+    },
+    "team-divider": {
+      "title": "Team Divider",
+      "desc": "Randomly assign n teams"
+    },
+    "random-number-gen": {
+      "title": "Random Number Generator",
+      "desc": "Set range, count, and uniqueness"
+    },
+    "regex-tester": {
+      "title": "Regex Tester",
+      "desc": "Test regex patterns in real time"
+    },
+    "hash-gen": {
+      "title": "Hash Generator",
+      "desc": "Generate MD5, SHA-1, and SHA-256 hashes"
+    },
+    "uuid-gen": {
+      "title": "UUID Generator",
+      "desc": "Generate and copy v4 UUIDs instantly"
+    },
+    "base-converter": {
+      "title": "Base Converter",
+      "desc": "Convert between base 2, 8, 10, and 16"
+    },
+    "unix-timestamp": {
+      "title": "Unix Timestamp Converter",
+      "desc": "Convert timestamps ↔ dates"
+    },
+    "yaml-json-converter": {
+      "title": "YAML ↔ JSON Converter",
+      "desc": "Convert config file formats"
+    },
+    "json-to-csv": {
+      "title": "JSON → CSV Converter",
+      "desc": "Also supports CSV → JSON"
+    },
+    "image-to-base64": {
+      "title": "Image → Base64",
+      "desc": "Convert image files to data URIs"
+    },
+    "robots-txt-gen": {
+      "title": "robots.txt Generator",
+      "desc": "Create allow/block rules with a GUI"
+    },
+    "lorem-ipsum-gen": {
+      "title": "Lorem Ipsum Generator",
+      "desc": "Specify words, sentences, or paragraphs"
+    },
+    "css-shadow-gen": {
+      "title": "CSS Shadow Generator",
+      "desc": "Generate box-shadow with drag controls"
+    },
+    "css-gradient-gen": {
+      "title": "CSS Gradient Generator",
+      "desc": "Copy linear/radial gradient code"
+    },
+    "font-preview": {
+      "title": "Font Preview",
+      "desc": "Live rendering of Google Fonts"
+    },
+    "color-palette-gen": {
+      "title": "Color Palette Generator",
+      "desc": "Extract dominant colors from an image"
+    },
+    "aspect-ratio-calc": {
+      "title": "Aspect Ratio Calculator",
+      "desc": "Calculate 16:9, 4:3, and custom ratios"
+    },
+    "barcode-gen": {
+      "title": "Barcode Generator",
+      "desc": "Generate EAN-13, Code128, and QR codes"
+    },
+    "number-to-korean": {
+      "title": "Number → Korean",
+      "desc": "Convert 123 → 백이십삼 / 일이삼"
+    },
+    "consonant-extractor": {
+      "title": "Korean Consonant Extractor",
+      "desc": "Extract initial consonants from text"
+    },
+    "manuscript-calc": {
+      "title": "Manuscript Paper Calculator",
+      "desc": "Calculate 400/200 character page count"
+    },
+    "pomodoro-timer": {
+      "title": "Pomodoro Timer",
+      "desc": "25-min focus / 5-min break cycles"
+    },
+    "stopwatch": {
+      "title": "Stopwatch",
+      "desc": "Lap recording and sharing"
+    },
+    "timezone-converter": {
+      "title": "Timezone Converter",
+      "desc": "Display multiple world city times"
+    },
+    "checklist-gen": {
+      "title": "Checklist Generator",
+      "desc": "Create shareable URL checklists"
+    },
+    "unit-converter": {
+      "title": "Unit Converter",
+      "desc": "Convert length, weight, temperature, area"
+    },
+    "celsius-fahrenheit": {
+      "title": "°C ↔ °F Converter",
+      "desc": "Real-time Celsius/Fahrenheit conversion"
+    },
+    "emoji-search": {
+      "title": "Emoji Search",
+      "desc": "Find and copy emojis by keyword"
+    },
+    "special-chars": {
+      "title": "Special Characters",
+      "desc": "Arrows, symbols, and math characters"
+    },
+    "grayscale-image": {
+      "title": "Black & White Photo Converter",
+      "desc": "Convert photos to grayscale (black and white)",
+      "dropTitle": "Drop an image here",
+      "dropHint": "Supports JPG, PNG, and WebP. Converted locally in your browser",
+      "chooseFile": "Choose image",
+      "format": "Output format",
+      "quality": "Quality",
+      "processing": "Converting...",
+      "invalidFile": "Please choose a JPG, PNG, or WebP image.",
+      "convertError": "Could not convert this image. Try another file.",
+      "emptyPreview": "Converted image preview will appear here",
+      "dimensions": "Dimensions",
+      "originalSize": "Original file",
+      "outputSize": "Output file",
+      "reduction": "Reduction",
+      "download": "Download",
+      "clear": "Clear"
+    },
+    "lived-days-calc": {
+      "title": "Days Lived Calculator",
+      "desc": "Calculate how many days you have lived"
+    },
+    "year-days-left": {
+      "title": "Days Left This Year",
+      "desc": "Calculate how many days remain in the year"
+    },
+    "anniversary-calc": {
+      "title": "Anniversary Calculator",
+      "desc": "Calculate anniversary dates and day counts"
+    },
+    "shoe-size-converter": {
+      "title": "International Shoe Size Converter",
+      "desc": "Convert shoe sizes between Korea, US, UK, EU, and Japan"
+    },
+    "clothing-size-converter": {
+      "title": "International Clothing Size Converter",
+      "desc": "Convert clothing sizes between common international systems"
+    },
+    "dog-human-age": {
+      "title": "Dog Age to Human Age Converter",
+      "desc": "Convert dog age to an approximate human age"
+    },
+    "cat-human-age": {
+      "title": "Cat Age to Human Age Converter",
+      "desc": "Convert cat age to an approximate human age"
+    },
+    "coin-flip": {
+      "title": "Coin Flip",
+      "desc": "Flip a virtual coin instantly"
+    },
+    "current-ip-checker": {
+      "title": "Current IP Checker",
+      "desc": "Check your current public IP address"
+    },
+    "random-color-combo": {
+      "title": "Random Color Combination Generator",
+      "desc": "Generate random color palettes and combinations"
+    },
+    "korean-age-calc": {
+      "title": "Korean Legal Age Calculator",
+      "desc": "Calculate Korean legal age from a birth date"
+    },
+    "real-estate-fee-calc": {
+      "title": "Korean Real Estate Brokerage Fee Calculator",
+      "desc": "Estimate Korean real estate agent commission"
+    },
+    "severance-pay-calc": {
+      "title": "Korean Severance Pay Calculator",
+      "desc": "Estimate severance pay under Korean rules"
+    },
+    "unemployment-benefit-calc": {
+      "title": "Korean Unemployment Benefit Calculator",
+      "desc": "Estimate Korean unemployment benefit amount and period"
+    },
+    "korean-address-converter": {
+      "title": "English Korean Address Converter",
+      "desc": "Convert between Korean and English address formats"
+    },
+    "memorial-49-calc": {
+      "title": "49th Day Memorial Date Calculator",
+      "desc": "Calculate the Korean 49th day memorial date"
+    },
+    "workday-countdown": {
+      "title": "Workday Countdown Clock",
+      "desc": "Count down to the end of the workday"
+    },
+    "fullscreen-clock": {
+      "title": "Fullscreen Current Time",
+      "desc": "Show the current time in fullscreen"
+    },
+    "online-scoreboard": {
+      "title": "Online Scoreboard",
+      "desc": "Create a scoreboard for baseball, soccer, or general games"
+    },
+    "latitude-longitude-finder": {
+      "title": "Latitude Longitude Finder",
+      "desc": "Find latitude and longitude for a place or address"
+    }
+  },
+  "toolPage": {
+    "back": "← Back to tools",
+    "tryIt": "Try it"
+  },
+  "footer": {
+    "tagline": "No install. Use instantly.",
+    "tools": "Tools",
+    "about": "About",
+    "rights": "All rights reserved."
+  }
+}
