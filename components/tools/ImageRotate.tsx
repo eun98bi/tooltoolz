@@ -53,11 +53,12 @@ export default function ImageRotate() {
   const [error, setError] = useState('')
 
   useEffect(() => {
-    return () => {
-      if (source) URL.revokeObjectURL(source.url)
-      if (result) URL.revokeObjectURL(result.url)
-    }
-  }, [source, result])
+    return () => { if (source) URL.revokeObjectURL(source.url) }
+  }, [source])
+
+  useEffect(() => {
+    return () => { if (result) URL.revokeObjectURL(result.url) }
+  }, [result])
 
   useEffect(() => {
     if (source) void renderImage(source)
