@@ -3,6 +3,7 @@ import { useState, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 import { Tool, Category } from '@/lib/tools'
 import ToolCard from './ToolCard'
+import AdBanner from './AdBanner'
 
 interface ToolGridProps {
   locale: string
@@ -74,6 +75,9 @@ export default function ToolGrid({ locale, tools }: ToolGridProps) {
             <span className="w-px h-4 bg-gray-200 dark:bg-gray-700" />
             <span className="text-green-600 dark:text-green-400 font-medium">{t('home.free')}</span>
           </div>
+
+          {/* Ad */}
+          <AdBanner />
         </div>
       </section>
 
