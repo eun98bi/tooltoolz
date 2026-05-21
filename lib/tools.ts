@@ -60,7 +60,7 @@ export const tools: Tool[] = [
   { slug: 'img-size-reduce',  category: 'image', icon: 'KB',   implemented: true },
   { slug: 'grayscale-image',  category: 'image', icon: 'BW',   implemented: true },
 
-  // Calculator (17)
+  // Calculator (19)
   { slug: 'percent-calc',             category: 'calc', icon: '%',    implemented: true },
   { slug: 'date-calc',                category: 'calc', icon: 'DAY',  implemented: true },
   { slug: 'time-diff-calc',           category: 'calc', icon: 'TIME', implemented: true },
@@ -78,6 +78,8 @@ export const tools: Tool[] = [
   { slug: 'anniversary-calc',         category: 'calc', icon: 'ANN',  implemented: true },
   { slug: 'shoe-size-converter',      category: 'calc', icon: 'SHOE', implemented: true },
   { slug: 'clothing-size-converter',  category: 'calc', icon: 'SIZE', implemented: true },
+  { slug: 'unit-converter',           category: 'calc', icon: 'UNIT', implemented: true },
+  { slug: 'celsius-fahrenheit',       category: 'calc', icon: 'C/F',  implemented: true },
 
   // Niche Calculator (10)
   { slug: 'baseball-stats',       category: 'niche', icon: 'ERA', implemented: true },
@@ -117,7 +119,7 @@ export const tools: Tool[] = [
   { slug: 'lorem-ipsum-gen',     category: 'dev', icon: 'TXT', implemented: true },
   { slug: 'current-ip-checker',  category: 'dev', icon: 'IP',  implemented: true },
 
-  // Design (9)
+  // Design (11)
   { slug: 'color-converter',    category: 'design', icon: 'HEX', implemented: true },
   { slug: 'qr-code',            category: 'design', icon: 'QR',  implemented: true },
   { slug: 'css-shadow-gen',     category: 'design', icon: 'SHD', implemented: true },
@@ -127,6 +129,8 @@ export const tools: Tool[] = [
   { slug: 'aspect-ratio-calc',  category: 'design', icon: '16:9',implemented: true },
   { slug: 'random-color-combo', category: 'design', icon: 'RGB', implemented: true },
   { slug: 'barcode-gen',        category: 'design', icon: '|||', implemented: true },
+  { slug: 'emoji-search',       category: 'design', icon: ':)',   implemented: true },
+  { slug: 'special-chars',      category: 'design', icon: 'SYM',  implemented: true },
 
   // Korean special (9)
   { slug: 'number-to-korean',              category: 'kr', icon: '123',  implemented: true },
@@ -149,9 +153,4 @@ export const tools: Tool[] = [
   { slug: 'online-scoreboard',          category: 'productivity', icon: 'SCORE', implemented: true },
   { slug: 'latitude-longitude-finder',  category: 'productivity', icon: 'GEO',   implemented: true },
 
-  // Other (4)
-  { slug: 'unit-converter',     category: 'calc',   icon: 'UNIT', implemented: true },
-  { slug: 'celsius-fahrenheit', category: 'calc',   icon: 'C/F',  implemented: true },
-  { slug: 'emoji-search',       category: 'design', icon: ':)',   implemented: true },
-  { slug: 'special-chars',      category: 'design', icon: 'SYM',  implemented: true },
 ]
