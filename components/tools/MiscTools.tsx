@@ -294,7 +294,7 @@ function WorkdayCountdown() {
   const target = new Date(now); target.setHours(hh || 18, mm || 0, 0, 0)
   const left = Math.max(0, target.getTime() - now.getTime())
   const remaining = `${String(Math.floor(left / 3600000)).padStart(2, '0')}:${String(Math.floor(left / 60000) % 60).padStart(2, '0')}:${String(Math.floor(left / 1000) % 60).padStart(2, '0')}`
-  return <Shell slug="workday-countdown" result={<div ref={countdownRef} className="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-6 text-center text-gray-900 fullscreen:min-h-screen fullscreen:rounded-none fullscreen:bg-gray-950 fullscreen:text-white dark:bg-gray-900 dark:text-white"><div className="text-5xl font-bold fullscreen:text-[12vw]">{remaining}</div><div className="mt-3 text-sm text-gray-500 fullscreen:text-3xl fullscreen:text-gray-300 dark:text-gray-400">{end}</div></div>}>
+  return <Shell slug="workday-countdown" result={<div ref={countdownRef} className="flex min-h-52 flex-col items-center justify-center rounded-xl bg-white p-6 text-center text-gray-900 fullscreen:min-h-screen fullscreen:rounded-none fullscreen:bg-gray-950 fullscreen:text-white dark:bg-gray-900 dark:text-white"><div className="text-5xl font-bold fullscreen:text-[clamp(5rem,16vw,18rem)] fullscreen:leading-none">{remaining}</div><div className="mt-3 text-sm text-gray-500 fullscreen:text-3xl fullscreen:text-gray-300 dark:text-gray-400">{end}</div></div>}>
     <Field label="End"><Input type="time" value={end} onChange={(e) => setEnd(e.target.value)} /></Field>
     <Button onClick={() => countdownRef.current?.requestFullscreen?.()}>Fullscreen</Button>
   </Shell>
