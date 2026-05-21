@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { seoContent } from '@/lib/seo-content'
 import AdBanner from './AdBanner'
+import CoupangBanner from './CoupangBanner'
 
 interface ToolSEOSectionProps {
   slug: string
@@ -15,7 +16,7 @@ export default function ToolSEOSection({ slug, locale }: ToolSEOSectionProps) {
 
   return (
     <>
-      <AdBanner />
+      {isKr ? <CoupangBanner /> : <AdBanner />}
     <section className="mt-16 pt-10 border-t border-gray-200 dark:border-gray-800">
       <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-5">{content.heading}</h2>
       <div className="space-y-4 max-w-3xl">
