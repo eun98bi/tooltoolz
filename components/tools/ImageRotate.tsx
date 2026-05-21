@@ -69,7 +69,16 @@ export default function ImageRotate() {
     return Math.round((1 - result.size / source.size) * 100)
   }, [source, result])
 
-  async function renderImage(nextSource: SourceImage) {
+  async function renderImage(
+    nextSource: SourceImage,
+    opts?: { rotation: number; flipX: boolean; flipY: boolean; format: OutputFormat; quality: number }
+  ) {
+    const rot = opts ? opts.rotation : rotation
+    const fx = opts ? opts.flipX : flipX
+    const fy = opts ? opts.flipY : flipY
+    const fmt = opts ? opts.format : format
+    const q = opts ? opts.quality : quality
+
     setIsProcessing(true)
     setError('')
 
@@ -82,7 +91,7 @@ export default function ImageRotate() {
         img.src = nextSource.url
       })
 
-      const normalizedRotation = ((rotation % 360) + 360) % 360
+      const normalizedRotation = ((rot % 360) + 360) % 360
       const swapped = normalizedRotation === 90 || normalizedRotation === 270
       const width = swapped ? nextSource.height : nextSource.width
       const height = swapped ? nextSource.width : nextSource.height
@@ -93,14 +102,14 @@ export default function ImageRotate() {
       const context = canvas.getContext('2d')
       if (!context) throw new Error('Canvas unavailable')
 
-      if (format === 'image/jpeg') {
+      if (fmt === 'image/jpeg') {
         context.fillStyle = '#ffffff'
         context.fillRect(0, 0, width, height)
       }
 
       context.translate(width / 2, height / 2)
+      context.scale(fx ? -1 : 1, fy ? -1 : 1)
       context.rotate((normalizedRotation * Math.PI) / 180)
-      context.scale(flipX ? -1 : 1, flipY ? -1 : 1)
       context.imageSmoothingQuality = 'high'
       context.drawImage(img, -nextSource.width / 2, -nextSource.height / 2)
 
@@ -108,14 +117,14 @@ export default function ImageRotate() {
         canvas.toBlob((value) => {
           if (value) resolve(value)
           else reject(new Error('Image export failed'))
-        }, format, quality / 100)
+        }, fmt, q / 100)
       })
 
       const url = URL.createObjectURL(blob)
       setResult((previous) => {
         if (previous) URL.revokeObjectURL(previous.url)
         return {
-          name: outputName(nextSource.name, format),
+          name: outputName(nextSource.name, fmt),
           size: blob.size,
           width,
           height,
@@ -164,7 +173,7 @@ export default function ImageRotate() {
       setRotation(0)
       setFlipX(false)
       setFlipY(false)
-      await renderImage(nextSource)
+      await renderImage(nextSource, { rotation: 0, flipX: false, flipY: false, format, quality })
     } catch {
       URL.revokeObjectURL(url)
       reset()
