@@ -106,6 +106,8 @@ const koLabels: Record<string, string> = {
   'VAT amount': '부가세',
   'Net from gross': '공급가액',
   'VAT in gross': '포함된 부가세',
+  'Supply amount': '공급가액',
+  'Total incl. VAT': '합계금액',
   Amount: '금액',
   'VAT rate (%)': '부가세율 (%)',
   Converted: '환산 결과',
@@ -479,18 +481,28 @@ function HourlyCalc({ locale }: { locale: Lang }) {
 }
 
 function VatCalc({ locale }: { locale: Lang }) {
-  const [amount, setAmount] = useState('110')
+  const [amount, setAmount] = useState('100000')
   const [rate, setRate] = useState('10')
+  const [mode, setMode] = useState<'net' | 'gross'>('net')
   const a = n(amount)
   const r = n(rate) / 100
+  const net = mode === 'net' ? a : a / (1 + r)
+  const vat = mode === 'net' ? a * r : a - a / (1 + r)
+  const total = mode === 'net' ? a * (1 + r) : a
+  const btnBase = 'flex-1 rounded-lg px-3 py-2 text-sm font-medium transition-colors'
+  const btnActive = 'bg-white text-gray-900 shadow-sm dark:bg-gray-700 dark:text-white'
+  const btnInactive = 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200'
   return (
     <Shell slug="vat-calc" locale={locale} result={<>
-      <ResultRow label="VAT added" value={number(a * (1 + r), locale)} />
-      <ResultRow label="VAT amount" value={number(a * r, locale)} />
-      <ResultRow label="Net from gross" value={number(a / (1 + r), locale)} />
-      <ResultRow label="VAT in gross" value={number(a - a / (1 + r), locale)} />
+      <ResultRow label="Supply amount" value={number(net, locale)} />
+      <ResultRow label="VAT amount" value={number(vat, locale)} />
+      <ResultRow label="Total incl. VAT" value={number(total, locale)} />
     </>}>
-      <Field label="Amount"><Input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} /></Field>
+      <div className="flex gap-1 rounded-xl bg-gray-100 p-1 dark:bg-gray-800">
+        <button type="button" onClick={() => setMode('net')} className={`${btnBase} ${mode === 'net' ? btnActive : btnInactive}`}>{locale === 'kr' ? '공급가액 입력' : 'Enter net'}</button>
+        <button type="button" onClick={() => setMode('gross')} className={`${btnBase} ${mode === 'gross' ? btnActive : btnInactive}`}>{locale === 'kr' ? '합계금액 입력' : 'Enter total'}</button>
+      </div>
+      <Field label={mode === 'net' ? 'Supply amount' : 'Total incl. VAT'}><Input type="number" value={amount} onChange={(e) => setAmount(e.target.value)} /></Field>
       <Field label="VAT rate (%)"><Input type="number" value={rate} onChange={(e) => setRate(e.target.value)} /></Field>
     </Shell>
   )
