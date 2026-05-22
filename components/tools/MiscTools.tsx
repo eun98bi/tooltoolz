@@ -307,9 +307,16 @@ function WorkdayCountdown() {
 }
 
 function FullscreenClock() {
+  const clockRef = useRef<HTMLDivElement>(null)
   const [now, setNow] = useState(new Date())
+  const [isFullscreen, setIsFullscreen] = useState(false)
   useEffect(() => { const id = window.setInterval(() => setNow(new Date()), 1000); return () => window.clearInterval(id) }, [])
-  return <Shell slug="fullscreen-clock" result={<div className="rounded-xl bg-gray-950 p-8 text-center text-white"><div className="text-6xl font-bold">{now.toLocaleTimeString()}</div><div className="mt-3 text-gray-300">{now.toLocaleDateString()}</div></div>}><Button onClick={() => document.documentElement.requestFullscreen?.()}>Start</Button></Shell>
+  useEffect(() => {
+    const onFSChange = () => setIsFullscreen(document.fullscreenElement === clockRef.current)
+    document.addEventListener('fullscreenchange', onFSChange)
+    return () => document.removeEventListener('fullscreenchange', onFSChange)
+  }, [])
+  return <Shell slug="fullscreen-clock" result={<div ref={clockRef} className={`flex flex-col items-center justify-center rounded-xl bg-white p-8 text-center text-gray-900 dark:bg-gray-950 dark:text-white ${isFullscreen ? 'min-h-screen rounded-none' : 'min-h-52'}`}><div className={`font-bold ${isFullscreen ? 'text-[clamp(5rem,20vw,22rem)] leading-none' : 'text-6xl'}`}>{now.toLocaleTimeString()}</div><div className={`mt-3 text-gray-500 dark:text-gray-300 ${isFullscreen ? 'text-3xl' : 'text-sm'}`}>{now.toLocaleDateString()}</div></div>}><Button onClick={() => clockRef.current?.requestFullscreen?.()}>Fullscreen</Button></Shell>
 }
 
 function OnlineScoreboard() {
