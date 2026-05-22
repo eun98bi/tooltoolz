@@ -224,13 +224,21 @@ function CoinFlip() {
   const [heads, setHeads] = useState(0)
   const [tails, setTails] = useState(0)
   const [history, setHistory] = useState<string[]>([])
+  const [flipping, setFlipping] = useState(false)
+  const [flipCount, setFlipCount] = useState(0)
 
   function flip() {
+    if (flipping) return
     const next = Math.random() < 0.5 ? 'Heads' : 'Tails'
-    setResult(next)
-    setHistory((items) => [next, ...items].slice(0, 12))
-    if (next === 'Heads') setHeads((value) => value + 1)
-    else setTails((value) => value + 1)
+    setFlipping(true)
+    setFlipCount((c) => c + 1)
+    setTimeout(() => {
+      setResult(next)
+      setHistory((items) => [next, ...items].slice(0, 12))
+      if (next === 'Heads') setHeads((value) => value + 1)
+      else setTails((value) => value + 1)
+      setFlipping(false)
+    }, 1000)
   }
 
   function reset() {
@@ -243,8 +251,8 @@ function CoinFlip() {
   const total = heads + tails
   const locale = useLocale()
   return <Shell slug="coin-flip" result={<div className="space-y-4">
-    <div className="text-center">
-      <div className="mx-auto flex aspect-square w-40 items-center justify-center rounded-full border-8 border-amber-300 bg-amber-100 text-2xl font-bold text-amber-900 shadow-inner dark:border-amber-500 dark:bg-amber-900/40 dark:text-amber-100">{result ? localizeText(result, locale) : '?'}</div>
+    <div className="text-center" style={{ perspective: '600px' }}>
+      <div key={flipCount} className="mx-auto flex aspect-square w-40 items-center justify-center rounded-full border-8 border-amber-300 bg-amber-100 text-2xl font-bold text-amber-900 shadow-inner dark:border-amber-500 dark:bg-amber-900/40 dark:text-amber-100" style={flipping ? { animation: 'coin-flip 1s ease-out forwards' } : {}}>{flipping ? '?' : (result ? localizeText(result, locale) : '?')}</div>
       <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">{localizeText(total ? `${total} flips` : 'Ready', locale)}</p>
     </div>
     <ResultList items={history.length ? history : ['No flips yet']} />
