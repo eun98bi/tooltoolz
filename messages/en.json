@@ -115,11 +115,8 @@
       "desc": "Remove leading, trailing, and duplicate spaces",
       "modeLabel": "Mode",
       "modes": {
-        "trim": "Trim leading & trailing",
-        "collapse": "Collapse multiple spaces",
-        "trimCollapse": "Trim + collapse spaces",
         "removeAll": "Remove all spaces",
-        "trimLines": "Trim each line"
+        "removeAllAndNewlines": "Remove spaces + newlines"
       },
       "input": "Input",
       "output": "Output",

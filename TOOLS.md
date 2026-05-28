@@ -8,11 +8,11 @@
 
 | slug | English | 한글 |
 |------|---------|------|
-| `char-count` | Character Counter | 글자 수 세기 |
-| `json-format` | JSON Formatter | JSON 포맷터 |
-| `password-gen` | Password Generator | 비밀번호 생성기 |
-| `mobile-line-break` | Mobile Line Break | 모바일 줄바꿈 변환 |
-| `whitespace-remove` | Whitespace Remover | 공백 제거기 |
+| `char-count` | Character Counter | 글자 수 세기 | ㅇ
+| `json-format` | JSON Formatter | JSON 포맷터 | ㅇ
+| `password-gen` | Password Generator | 비밀번호 생성기 | ㅇ
+| `mobile-line-break` | Mobile Line Break | 모바일 줄바꿈 변환 | ㅇ
+| `whitespace-remove` | Whitespace Remover | 공백 제거기 | 
 | `newline-remove` | Newline Remover | 줄바꿈 제거기 |
 | `case-converter` | Case Converter | 대소문자 변환기 |
 | `slug-generator` | Slug Generator | 슬러그 생성기 |

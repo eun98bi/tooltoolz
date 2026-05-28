@@ -115,11 +115,8 @@
       "desc": "앞뒤·중복 공백을 일괄 제거합니다",
       "modeLabel": "처리 방식",
       "modes": {
-        "trim": "앞뒤 공백 제거",
-        "collapse": "중복 공백 하나로",
-        "trimCollapse": "앞뒤 + 중복 공백 모두",
         "removeAll": "모든 공백 제거",
-        "trimLines": "각 줄 앞뒤 공백 제거"
+        "removeAllAndNewlines": "공백 + 줄바꿈 제거"
       },
       "input": "원본 텍스트",
       "output": "결과",

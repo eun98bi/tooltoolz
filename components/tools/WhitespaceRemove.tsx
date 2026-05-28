@@ -2,37 +2,25 @@
 import { useState, useMemo } from 'react'
 import { useTranslations } from 'next-intl'
 
-type Mode = 'trim' | 'collapse' | 'trimCollapse' | 'removeAll' | 'trimLines'
+type Mode = 'removeAll' | 'removeAllAndNewlines'
 
 function convert(text: string, mode: Mode): string {
   switch (mode) {
-    case 'trim':
-      return text.trim()
-    case 'collapse':
-      return text.replace(/\t/g, ' ').replace(/ {2,}/g, ' ')
-    case 'trimCollapse':
-      return text
-        .trim()
-        .replace(/\t/g, ' ')
-        .replace(/ {2,}/g, ' ')
     case 'removeAll':
-      return text.replace(/ /g, '').replace(/\t/g, '')
-    case 'trimLines':
-      return text
-        .split('\n')
-        .map((l) => l.trim())
-        .join('\n')
+      return text.replace(/[ \t]/g, '')
+    case 'removeAllAndNewlines':
+      return text.replace(/\s/g, '')
     default:
       return text
   }
 }
 
-const MODES: Mode[] = ['trim', 'collapse', 'trimCollapse', 'removeAll', 'trimLines']
+const MODES: Mode[] = ['removeAll', 'removeAllAndNewlines']
 
 export default function WhitespaceRemove() {
   const t = useTranslations('tools.whitespace-remove')
   const [input, setInput] = useState('')
-  const [mode, setMode] = useState<Mode>('trimCollapse')
+  const [mode, setMode] = useState<Mode>('removeAll')
   const [copied, setCopied] = useState(false)
 
   const output = useMemo(() => (input ? convert(input, mode) : ''), [input, mode])
