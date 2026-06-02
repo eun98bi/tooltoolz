@@ -84,7 +84,7 @@ function render(md: string): string {
     const para: string[] = []
     while (i < lines.length) {
       const l = lines[i]
-      if (!l.trim() || l.startsWith('#') || l.startsWith('>') || l.startsWith('```') ||
+      if (!l.trim() || /^(#{1,6})\s+(.+)$/.test(l) || l.startsWith('>') || l.startsWith('```') ||
           /^[-*+]\s/.test(l) || /^\d+\.\s/.test(l) || /^[-*_]{3,}$/.test(l.trim())) break
       para.push(lines[i++])
     }
