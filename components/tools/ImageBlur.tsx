@@ -48,12 +48,20 @@ function clamp(value: number, min: number, max: number) {
   return Math.min(max, Math.max(min, value))
 }
 
+function contentBox(boxWidth: number, boxHeight: number, naturalWidth: number, naturalHeight: number) {
+  const scale = Math.min(boxWidth / naturalWidth, boxHeight / naturalHeight)
+  const width = naturalWidth * scale
+  const height = naturalHeight * scale
+  return { width, height, offsetX: (boxWidth - width) / 2, offsetY: (boxHeight - height) / 2 }
+}
+
 export default function ImageBlur() {
   const t = useTranslations('tools.img-blur')
   const inputRef = useRef<HTMLInputElement>(null)
   const imageRef = useRef<HTMLImageElement>(null)
   const dragStartRef = useRef<{ x: number; y: number } | null>(null)
   const [source, setSource] = useState<SourceImage | null>(null)
+  const [imageBox, setImageBox] = useState<{ width: number; height: number } | null>(null)
   const [area, setArea] = useState<BlurArea | null>(null)
   const [result, setResult] = useState<BlurResult | null>(null)
   const [mode, setMode] = useState<BlurMode>('full')
@@ -82,15 +90,29 @@ export default function ImageBlur() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mode, area, radius, format, quality])
 
-  const areaStyle = useMemo(() => {
-    if (!source || !area || mode !== 'area') return null
-    return {
-      left: `${(area.x / source.width) * 100}%`,
-      top: `${(area.y / source.height) * 100}%`,
-      width: `${(area.width / source.width) * 100}%`,
-      height: `${(area.height / source.height) * 100}%`,
+  useEffect(() => {
+    const img = imageRef.current
+    if (!img || !source) {
+      setImageBox(null)
+      return
     }
-  }, [source, area, mode])
+    const update = () => setImageBox({ width: img.clientWidth, height: img.clientHeight })
+    update()
+    const observer = new ResizeObserver(update)
+    observer.observe(img)
+    return () => observer.disconnect()
+  }, [source])
+
+  const areaStyle = useMemo(() => {
+    if (!source || !area || mode !== 'area' || !imageBox) return null
+    const content = contentBox(imageBox.width, imageBox.height, source.width, source.height)
+    return {
+      left: `${((content.offsetX + (area.x / source.width) * content.width) / imageBox.width) * 100}%`,
+      top: `${((content.offsetY + (area.y / source.height) * content.height) / imageBox.height) * 100}%`,
+      width: `${((area.width / source.width) * content.width / imageBox.width) * 100}%`,
+      height: `${((area.height / source.height) * content.height / imageBox.height) * 100}%`,
+    }
+  }, [source, area, mode, imageBox])
 
   const reduction = useMemo(() => {
     if (!source || !result) return null
@@ -101,9 +123,10 @@ export default function ImageBlur() {
     const img = imageRef.current
     if (!img || !source) return null
     const rect = img.getBoundingClientRect()
+    const content = contentBox(rect.width, rect.height, source.width, source.height)
     return {
-      x: clamp(((clientX - rect.left) / rect.width) * source.width, 0, source.width),
-      y: clamp(((clientY - rect.top) / rect.height) * source.height, 0, source.height),
+      x: clamp(((clientX - rect.left - content.offsetX) / content.width) * source.width, 0, source.width),
+      y: clamp(((clientY - rect.top - content.offsetY) / content.height) * source.height, 0, source.height),
     }
   }
 
