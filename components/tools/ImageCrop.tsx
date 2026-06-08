@@ -65,9 +65,14 @@ export default function ImageCrop() {
   useEffect(() => {
     return () => {
       if (source) URL.revokeObjectURL(source.url)
+    }
+  }, [source])
+
+  useEffect(() => {
+    return () => {
       if (result) URL.revokeObjectURL(result.url)
     }
-  }, [source, result])
+  }, [result])
 
   useEffect(() => {
     if (source && crop) void renderCrop(source, crop)
