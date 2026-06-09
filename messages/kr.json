@@ -516,7 +516,7 @@
     },
     "currency-calc": {
       "title": "환율 계산기",
-      "desc": "실시간 환율 API와 연동합니다"
+      "desc": "환율을 입력해 금액을 변환합니다"
     },
     "compound-calc": {
       "title": "복리 계산기",

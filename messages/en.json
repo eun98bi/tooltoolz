@@ -516,7 +516,7 @@
     },
     "currency-calc": {
       "title": "Currency Converter",
-      "desc": "Live exchange rate conversion"
+      "desc": "Convert amounts using a custom exchange rate"
     },
     "compound-calc": {
       "title": "Compound Interest Calculator",
