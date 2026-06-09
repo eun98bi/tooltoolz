@@ -595,6 +595,7 @@ function CompoundCalc({ locale }: { locale: Lang }) {
   const [monthly, setMonthly] = useState('200')
   const [rate, setRate] = useState('7')
   const [years, setYears] = useState('10')
+  const [currency, setCurrency] = useState('USD')
   const months = Math.round(n(years) * 12)
   const monthlyRate = n(rate) / 100 / 12
   let balance = n(principal)
@@ -602,14 +603,15 @@ function CompoundCalc({ locale }: { locale: Lang }) {
   const invested = n(principal) + n(monthly) * months
   return (
     <Shell slug="compound-calc" locale={locale} result={<>
-      <ResultRow label="Final balance" value={money(balance, locale)} />
-      <ResultRow label="Invested" value={money(invested, locale)} />
-      <ResultRow label="Growth" value={money(balance - invested, locale)} />
+      <ResultRow label="Final balance" value={money(balance, locale, currency)} />
+      <ResultRow label="Invested" value={money(invested, locale, currency)} />
+      <ResultRow label="Growth" value={money(balance - invested, locale, currency)} />
     </>}>
       <Field label="Initial principal"><Input type="number" value={principal} onChange={(e) => setPrincipal(e.target.value)} /></Field>
       <Field label="Monthly contribution"><Input type="number" value={monthly} onChange={(e) => setMonthly(e.target.value)} /></Field>
       <Field label="Annual return (%)"><Input type="number" value={rate} onChange={(e) => setRate(e.target.value)} /></Field>
       <Field label="Years"><Input type="number" value={years} onChange={(e) => setYears(e.target.value)} /></Field>
+      <Field label="Currency"><Select value={currency} onChange={(e) => setCurrency(e.target.value)}><option>USD</option><option>KRW</option><option>JPY</option><option>CNY</option><option>EUR</option></Select></Field>
     </Shell>
   )
 }
