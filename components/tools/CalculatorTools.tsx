@@ -303,29 +303,78 @@ function Shell({ slug, locale, children, result }: { slug: CalcSlug; locale: Lan
 }
 
 function PercentCalc({ locale }: { locale: Lang }) {
+  const t = useTranslations('tools.percent-calc')
   const [base, setBase] = useState('1000')
-  const [percent, setPercent] = useState('15')
-  const [oldValue, setOldValue] = useState('100')
-  const [newValue, setNewValue] = useState('120')
-  const b = n(base)
-  const p = n(percent)
-  const oldN = n(oldValue)
-  const newN = n(newValue)
-  const change = oldN ? ((newN - oldN) / oldN) * 100 : 0
+  const [percent, setPercent] = useState('10')
+  const [result, setResult] = useState('100')
+  // tracks which of base/percent was most recently edited
+  const [lastChanged, setLastChanged] = useState<'base' | 'percent'>('percent')
+
+  function fmt(x: number): string {
+    if (!Number.isFinite(x)) return ''
+    return String(Math.round(x * 1000000) / 1000000)
+  }
+
+  function handleBase(val: string) {
+    setBase(val)
+    setLastChanged('base')
+    const a = parseFloat(val), b = parseFloat(percent)
+    if (Number.isFinite(a) && Number.isFinite(b)) setResult(fmt(a * b / 100))
+  }
+
+  function handlePercent(val: string) {
+    setPercent(val)
+    setLastChanged('percent')
+    const a = parseFloat(base), b = parseFloat(val)
+    if (Number.isFinite(a) && Number.isFinite(b)) setResult(fmt(a * b / 100))
+  }
+
+  function handleResult(val: string) {
+    setResult(val)
+    const c = parseFloat(val)
+    if (lastChanged === 'base') {
+      // base was set last → keep base, derive percent
+      const a = parseFloat(base)
+      if (Number.isFinite(a) && a !== 0 && Number.isFinite(c)) setPercent(fmt(c / a * 100))
+    } else {
+      // percent was set last → keep percent, derive base
+      const b = parseFloat(percent)
+      if (Number.isFinite(b) && b !== 0 && Number.isFinite(c)) setBase(fmt(c * 100 / b))
+    }
+  }
+
+  const kr = locale === 'kr'
   return (
-    <Shell slug="percent-calc" locale={locale} result={<>
-      <ResultRow label={`${p}% of ${number(b, locale)}`} value={number((b * p) / 100, locale)} />
-      <ResultRow label="Increase" value={number(b * (1 + p / 100), locale)} />
-      <ResultRow label="Discount" value={number(b * (1 - p / 100), locale)} />
-      <ResultRow label="Percent change" value={`${number(change, locale)}%`} />
-    </>}>
-      <Field label="Base value"><Input type="number" value={base} onChange={(e) => setBase(e.target.value)} /></Field>
-      <Field label="Percent (%)"><Input type="number" value={percent} onChange={(e) => setPercent(e.target.value)} /></Field>
-      <div className="grid grid-cols-2 gap-3">
-        <Field label="Old value"><Input type="number" value={oldValue} onChange={(e) => setOldValue(e.target.value)} /></Field>
-        <Field label="New value"><Input type="number" value={newValue} onChange={(e) => setNewValue(e.target.value)} /></Field>
+    <div>
+      <h1 className="text-2xl font-bold text-gray-900 dark:text-white">{t('title')}</h1>
+      <p className="mb-6 mt-1 text-gray-500 dark:text-gray-400">{t('desc')}</p>
+      <div className="max-w-sm">
+        <Card>
+          <div className="space-y-4">
+            <label className="block">
+              <span className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">{kr ? '원래 값' : 'Base value'}</span>
+              <Input type="number" value={base} onChange={e => handleBase(e.target.value)} />
+            </label>
+            <label className="block">
+              <span className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">{kr ? '퍼센트 (%)' : 'Percent (%)'}</span>
+              <Input type="number" value={percent} onChange={e => handlePercent(e.target.value)} />
+            </label>
+            <div className="border-t border-gray-100 pt-4 dark:border-gray-800">
+              <label className="block">
+                <span className="mb-2 flex items-center gap-1.5 text-sm font-medium text-gray-700 dark:text-gray-300">
+                  <span className="font-normal text-gray-400">=</span>
+                  {kr ? '결과 값' : 'Result'}
+                </span>
+                <Input type="number" value={result} onChange={e => handleResult(e.target.value)} />
+              </label>
+            </div>
+          </div>
+        </Card>
+        <p className="mt-3 text-xs text-gray-400 dark:text-gray-500">
+          {kr ? '세 값 중 두 값을 입력하면 나머지 값이 자동 계산됩니다.' : 'Enter any two values to calculate the third.'}
+        </p>
       </div>
-    </Shell>
+    </div>
   )
 }
 
