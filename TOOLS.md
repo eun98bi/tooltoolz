@@ -12,19 +12,19 @@
 | `json-format` | JSON Formatter | JSON 포맷터 | ㅇ
 | `password-gen` | Password Generator | 비밀번호 생성기 | ㅇ
 | `mobile-line-break` | Mobile Line Break | 모바일 줄바꿈 변환 | ㅇ
-| `whitespace-remove` | Whitespace Remover | 공백 제거기 | 
-| `newline-remove` | Newline Remover | 줄바꿈 제거기 |
-| `case-converter` | Case Converter | 대소문자 변환기 |
-| `slug-generator` | Slug Generator | 슬러그 생성기 |
-| `url-encoder` | URL Encoder / Decoder | URL 인코더/디코더 |
-| `base64-converter` | Base64 Converter | Base64 변환기 |
-| `json-validator` | JSON Validator | JSON 유효성 검사기 |
-| `markdown-preview` | Markdown Preview | 마크다운 미리보기 |
-| `html-escape` | HTML Escape | HTML 이스케이프 |
-| `csv-to-json` | CSV to JSON | CSV → JSON 변환기 |
-| `diff-checker` | Diff Checker | 텍스트 비교기 |
-| `random-nickname` | Random Nickname | 랜덤 닉네임 생성기 |
-| `morse-code` | Morse Code Converter | 모스 부호 변환기 |
+| `whitespace-remove` | Whitespace Remover | 공백 제거기 | ㅇ
+| `newline-remove` | Newline Remover | 줄바꿈 제거기 | ㅇ
+| `case-converter` | Case Converter | 대소문자 변환기 | ㅇ
+| `slug-generator` | Slug Generator | 슬러그 생성기 | ㅇ
+| `url-encoder` | URL Encoder / Decoder | URL 인코더/디코더 | ㅇ
+| `base64-converter` | Base64 Converter | Base64 변환기 | ㅇ
+| `json-validator` | JSON Validator | JSON 유효성 검사기 | ㅇ
+| `markdown-preview` | Markdown Preview | 마크다운 미리보기 | ㅇ
+| `html-escape` | HTML Escape | HTML 이스케이프 | ㅇ
+| `csv-to-json` | CSV to JSON | CSV → JSON 변환기 | ㅇ
+| `diff-checker` | Diff Checker | 텍스트 비교기 | ㅇ
+| `random-nickname` | Random Nickname | 랜덤 닉네임 생성기 | ㅇ
+| `morse-code` | Morse Code Converter | 모스 부호 변환기 | ㅇ
 
 ---
 
@@ -32,16 +32,16 @@
 
 | slug | English | 한글 |
 |------|---------|------|
-| `jpg-to-png` | JPG to PNG Converter | JPG → PNG 변환기 |
-| `png-to-webp` | PNG to WebP Converter | PNG → WebP 변환기 |
-| `img-compress` | Image Compressor | 이미지 압축기 |
-| `img-resize` | Image Resizer | 이미지 크기 조정기 |
-| `img-crop` | Image Cropper | 이미지 자르기 |
-| `favicon-gen` | Favicon Generator | 파비콘 생성기 |
-| `img-blur` | Image Blur | 이미지 블러 |
-| `img-rotate` | Image Rotator | 이미지 회전기 |
-| `img-size-reduce` | Image Size Reducer | 이미지 용량 줄이기 |
-| `grayscale-image` | Grayscale Image | 흑백 이미지 변환기 |
+| `jpg-to-png` | JPG to PNG Converter | JPG → PNG 변환기 | ㅇ
+| `png-to-webp` | PNG to WebP Converter | PNG → WebP 변환기 | ㅇ
+| `img-compress` | Image Compressor | 이미지 압축기 | ㅇ
+| `img-resize` | Image Resizer | 이미지 크기 조정기 | ㅇ
+| `img-crop` | Image Cropper | 이미지 자르기 | ㅇ
+| `favicon-gen` | Favicon Generator | 파비콘 생성기 | ㅇ
+| `img-blur` | Image Blur | 이미지 블러 | ㅇ
+| `img-rotate` | Image Rotator | 이미지 회전기 | ㅇ
+| `img-size-reduce` | Image Size Reducer | 이미지 용량 줄이기 | ㅇ
+| `grayscale-image` | Grayscale Image | 흑백 이미지 변환기 | ㅇ
 
 ---
 
@@ -49,9 +49,9 @@
 
 | slug | English | 한글 |
 |------|---------|------|
-| `percent-calc` | Percentage Calculator | 퍼센트 계산기 |
-| `date-calc` | Date Calculator | 날짜 계산기 |
-| `time-diff-calc` | Time Difference Calculator | 시간 차이 계산기 |
+| `percent-calc` | Percentage Calculator | 퍼센트 계산기 | ㅇ
+| `date-calc` | Date Calculator | 날짜 계산기 | ㅇ
+| `time-diff-calc` | Time Difference Calculator | 시간 차이 계산기 | ㅇ
 | `bmi-calc` | BMI Calculator | BMI 계산기 |
 | `average-calc` | Average Calculator | 평균 계산기 |
 | `gpa-calc` | GPA Calculator | 학점 계산기 |

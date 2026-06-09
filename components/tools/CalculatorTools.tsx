@@ -420,18 +420,37 @@ function TimeDiffCalc({ locale }: { locale: Lang }) {
 }
 
 function BmiCalc({ locale }: { locale: Lang }) {
+  const [gender, setGender] = useState<'male' | 'female'>('male')
   const [height, setHeight] = useState('175')
   const [weight, setWeight] = useState('70')
   const h = n(height) / 100
   const bmi = h ? n(weight) / (h * h) : 0
-  const status = bmi < 18.5 ? 'Underweight' : bmi < 23 ? 'Normal' : bmi < 25 ? 'Overweight' : 'Obese'
+  const statusKey = bmi < 18.5 ? 0 : bmi < 23 ? 1 : bmi < 25 ? 2 : 3
+  const statusLabels = locale === 'kr'
+    ? ['저체중', '정상', '과체중', '비만']
+    : ['Underweight', 'Normal', 'Overweight', 'Obese']
+  const status = statusLabels[statusKey]
+  const heightIn = n(height) / 2.54
+  const ibw = gender === 'male' ? 50 + 2.3 * (heightIn - 60) : 45.5 + 2.3 * (heightIn - 60)
+  const ibwLabel = locale === 'kr' ? '이상 체중' : 'Ideal weight'
+  const genderLabel = locale === 'kr' ? '성별' : 'Gender'
+  const maleLabel = locale === 'kr' ? '남성' : 'Male'
+  const femaleLabel = locale === 'kr' ? '여성' : 'Female'
   return (
     <Shell slug="bmi-calc" locale={locale} result={<>
       <ResultRow label="BMI" value={number(bmi, locale, 1)} />
       <ResultRow label="Category" value={status} />
       <ResultRow label="Normal min" value={`${number(18.5 * h * h, locale, 1)} kg`} />
       <ResultRow label="Normal max" value={`${number(22.9 * h * h, locale, 1)} kg`} />
+      <ResultRow label={ibwLabel} value={`${number(Math.max(0, ibw), locale, 1)} kg`} />
     </>}>
+      <label className="block">
+        <span className="mb-2 block text-sm font-medium text-gray-700 dark:text-gray-300">{genderLabel}</span>
+        <div className="flex gap-2">
+          <button type="button" onClick={() => setGender('male')} className={`flex-1 rounded-xl border px-4 py-2.5 text-sm font-medium transition-colors ${gender === 'male' ? 'border-indigo-500 bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300' : 'border-gray-200 bg-white text-gray-700 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-300'}`}>{maleLabel}</button>
+          <button type="button" onClick={() => setGender('female')} className={`flex-1 rounded-xl border px-4 py-2.5 text-sm font-medium transition-colors ${gender === 'female' ? 'border-indigo-500 bg-indigo-50 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-300' : 'border-gray-200 bg-white text-gray-700 dark:border-gray-700 dark:bg-gray-950 dark:text-gray-300'}`}>{femaleLabel}</button>
+        </div>
+      </label>
       <Field label="Height (cm)"><Input type="number" value={height} onChange={(e) => setHeight(e.target.value)} /></Field>
       <Field label="Weight (kg)"><Input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} /></Field>
     </Shell>
