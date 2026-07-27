@@ -15,6 +15,7 @@ export const miscSlugs = [
   'unemployment-benefit-calc',
   'korean-address-converter',
   'memorial-49-calc',
+  'naver-place-tag',
   'pomodoro-timer',
   'stopwatch',
   'timezone-converter',

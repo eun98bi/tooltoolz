@@ -2338,6 +2338,30 @@ export const seoArticles: Record<string, Record<Locale, SeoArticle>> = {
       ],
     },
   },
+  'naver-place-tag': {
+    kr: {
+      heading: '네이버 플레이스 태그 분석기로 경쟁사 태그 확인하기',
+      paragraphs: [
+        '네이버 플레이스는 업체당 태그(키워드)를 최대 5개까지 설정할 수 있지만, 어떤 태그가 상위 노출에 유리한지, 경쟁사가 어떤 태그를 쓰고 있는지 직접 확인하기는 어렵습니다. 네이버 플레이스 태그 분석기는 경쟁사 플레이스 URL을 입력하면 각 업체가 등록한 태그를 모아 빈도순으로 정리해주는 무료 온라인 도구입니다.',
+        '사용 방법은 간단합니다. 상위 노출되는 경쟁사 업체의 네이버 플레이스 URL을 최대 10개까지 입력하고 분석하기를 누르면, 태그 분석기가 각 업체 페이지에서 등록된 태그를 모아 가장 많이 쓰인 순서로 랭킹을 보여줍니다. 개별 업체 URL은 물론 검색 결과 리스트 URL도 지원해 여러 업체를 한 번에 확인할 수 있습니다.',
+        '플레이스 태그 분석기는 특히 소상공인 사장님이 직접 네이버 플레이스를 운영하며 태그를 설정할 때 유용합니다. 같은 업종·같은 지역의 상위 업체가 공통으로 쓰는 태그를 확인하면, 검색 노출과 관련성이 높은 키워드를 추측이 아니라 데이터 기반으로 선택할 수 있습니다.',
+        '결과 화면에서는 태그별 사용 빈도가 막대그래프와 함께 표시되고, 상위 5개 태그는 버튼 한 번으로 복사할 수 있어 바로 내 업체 플레이스 설정에 옮겨 붙일 수 있습니다. 일부 업체는 태그 정보가 비공개이거나 페이지 구조 차이로 분석에 실패할 수 있는데, 이 경우 분석 실패 목록으로 별도 표시됩니다.',
+        '네이버 플레이스 태그 분석기는 사용자가 직접 URL을 입력하는 방식으로 동작하며, 공개된 플레이스 페이지 정보만 조회합니다. 자동으로 업체를 검색하거나 대량으로 수집하지 않으므로 가볍게 참고용으로 활용하기에 적합합니다.',
+        '무료 네이버 플레이스 태그 분석기, 플레이스 키워드 추천, 경쟁사 태그 분석, 플레이스 상위노출 태그를 찾고 있다면 이 도구로 경쟁사 태그 랭킹을 빠르게 확인하고, 내 업체에 맞는 태그 조합을 데이터에 기반해 정해보세요.',
+      ],
+    },
+    en: {
+      heading: 'Naver Place Tag Analyzer for Competitor Keyword Research',
+      paragraphs: [
+        'Naver Place lets each business set up to five tags, but figuring out which tags actually help visibility, or what tags competitors are using, is hard to do by hand. The Naver Place Tag Analyzer is a free online tool that reads competitor Naver Place URLs and ranks the tags they use by how often they appear.',
+        'Using it is simple. Paste up to ten competitor Naver Place URLs and run the analysis. The tool collects the tags registered on each listing and ranks them by frequency. It supports both individual place URLs and Naver Place search result list URLs, so you can check many competitors at once.',
+        'This tool is especially useful for small business owners who manage their own Naver Place listing and need to decide which tags to set. Seeing which tags the top-ranked businesses in the same category and area share in common lets you choose relevant keywords based on data instead of guesswork.',
+        'The results show each tag with a frequency bar, and the top five tags can be copied with one click so you can paste them straight into your own Naver Place tag settings. Some listings may fail to parse if their tag data is private or the page structure differs, and those are listed separately as skipped.',
+        'The Naver Place Tag Analyzer only reads the public listing pages you provide by URL. It does not auto-search for businesses or crawl at scale, which makes it a lightweight reference tool rather than a bulk scraper.',
+        'If you are looking for a free Naver Place tag analyzer, place keyword recommendations, competitor tag analysis, or Naver Place SEO tags, use this tool to quickly check competitor tag rankings and build a tag combination for your own listing based on real data.',
+      ],
+    },
+  },
   'real-estate-fee-calc': {
     kr: {
       heading: '부동산 중개수수료 계산기로 예상 중개보수 확인하기',

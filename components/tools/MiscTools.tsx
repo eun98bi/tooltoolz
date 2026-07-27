@@ -24,6 +24,15 @@ const ko: Record<string, string> = {
   Minutes: '분',
   Team: '팀',
   Score: '점수',
+  'Add URL': 'URL 추가',
+  Analyze: '분석하기',
+  'Analyzing...': '분석 중...',
+  'Copy top 5': '상위 5개 복사',
+  'Copied!': '복사 완료!',
+  'No tags found': '태그를 찾을 수 없습니다',
+  'Results appear here': '결과가 여기에 표시됩니다',
+  'Enter at least one URL': '최소 1개의 URL을 입력해주세요',
+  Skipped: '분석 실패',
 }
 
 function tr(text: string, locale: string) {
@@ -246,6 +255,154 @@ function Memorial49Calc() {
   return <Shell slug="memorial-49-calc" result={<ResultText rows={4} value={`49th day: ${d.toISOString().slice(0, 10)}`} />}><Field label="Date"><Input type="date" value={date} onChange={(e) => setDate(e.target.value)} /></Field></Shell>
 }
 
+interface PlaceTagResult {
+  rankings: { tag: string; count: number }[]
+  skipped: string[]
+  totalAnalyzed: number
+}
+
+const MAX_PLACE_URLS = 10
+
+function NaverPlaceTag() {
+  const locale = useLocale()
+  const [urls, setUrls] = useState<string[]>(['', '', ''])
+  const [loading, setLoading] = useState(false)
+  const [result, setResult] = useState<PlaceTagResult | null>(null)
+  const [error, setError] = useState('')
+  const [copied, setCopied] = useState(false)
+
+  function updateUrl(i: number, value: string) {
+    setUrls((prev) => prev.map((u, idx) => (idx === i ? value : u)))
+  }
+  function addUrl() {
+    if (urls.length < MAX_PLACE_URLS) setUrls((prev) => [...prev, ''])
+  }
+  function removeUrl(i: number) {
+    setUrls((prev) => (prev.length <= 1 ? prev : prev.filter((_, idx) => idx !== i)))
+  }
+
+  async function analyze() {
+    const valid = urls.map((u) => u.trim()).filter(Boolean)
+    if (valid.length === 0) {
+      setError(tr('Enter at least one URL', locale))
+      return
+    }
+    setLoading(true)
+    setError('')
+    setResult(null)
+    try {
+      const res = await fetch('/api/place-tag', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ urls: valid }),
+      })
+      if (!res.ok) {
+        const data = await res.json().catch(() => ({}))
+        throw new Error(data.error ?? 'Server error')
+      }
+      const data: PlaceTagResult = await res.json()
+      setResult(data)
+    } catch (e) {
+      setError(e instanceof Error ? e.message : 'Unknown error')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  function copyTop5() {
+    if (!result) return
+    const top5 = result.rankings.slice(0, 5).map((r) => r.tag).join(', ')
+    navigator.clipboard.writeText(top5).then(() => {
+      setCopied(true)
+      setTimeout(() => setCopied(false), 2000)
+    })
+  }
+
+  const maxCount = result?.rankings[0]?.count ?? 1
+
+  return (
+    <Shell
+      slug="naver-place-tag"
+      result={
+        !result ? (
+          <p className="text-sm text-gray-400">{tr('Results appear here', locale)}</p>
+        ) : result.rankings.length === 0 ? (
+          <p className="text-sm text-gray-400">{tr('No tags found', locale)}</p>
+        ) : (
+          <div className="space-y-4">
+            <div className="flex items-center justify-between gap-2">
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                {locale === 'kr'
+                  ? `태그 ${result.rankings.length}개 · 업체 ${result.totalAnalyzed}개 분석`
+                  : `${result.rankings.length} tags · ${result.totalAnalyzed} places analyzed`}
+              </p>
+              <button
+                type="button"
+                onClick={copyTop5}
+                className="shrink-0 rounded-lg bg-pink-600 px-3 py-1.5 text-xs font-medium text-white transition-colors hover:bg-pink-700"
+              >
+                {copied ? tr('Copied!', locale) : tr('Copy top 5', locale)}
+              </button>
+            </div>
+            <div className="space-y-2">
+              {result.rankings.map((item, i) => (
+                <div key={item.tag} className="flex items-center gap-3">
+                  <span className="w-5 shrink-0 text-right text-xs font-bold text-gray-400">{i + 1}</span>
+                  <span className="min-w-0 flex-1 break-keep text-sm text-gray-800 dark:text-gray-200">{item.tag}</span>
+                  <div className="h-2 w-16 shrink-0 overflow-hidden rounded-full bg-gray-100 dark:bg-gray-800">
+                    <div className="h-2 rounded-full bg-pink-500" style={{ width: `${(item.count / maxCount) * 100}%` }} />
+                  </div>
+                  <span className="w-14 shrink-0 text-right text-xs text-gray-500">{item.count}/{result.totalAnalyzed}</span>
+                </div>
+              ))}
+            </div>
+            {result.skipped.length > 0 && (
+              <p className="text-xs text-amber-600 dark:text-amber-400">{tr('Skipped', locale)}: {result.skipped.length}</p>
+            )}
+          </div>
+        )
+      }
+    >
+      <p className="text-xs text-gray-500 dark:text-gray-400">
+        {locale === 'kr'
+          ? `경쟁사 네이버 플레이스 URL을 최대 ${MAX_PLACE_URLS}개까지 입력하세요`
+          : `Enter up to ${MAX_PLACE_URLS} competitor Naver Place URLs`}{' '}
+        ({urls.length}/{MAX_PLACE_URLS})
+      </p>
+      <div className="space-y-2">
+        {urls.map((url, i) => (
+          <div key={i} className="flex items-center gap-2">
+            <Input value={url} onChange={(e) => updateUrl(i, e.target.value)} placeholder="https://pcmap.place.naver.com/place/..." />
+            <button
+              type="button"
+              onClick={() => removeUrl(i)}
+              disabled={urls.length <= 1}
+              className="shrink-0 px-1 text-gray-300 transition-colors hover:text-red-400 disabled:cursor-not-allowed disabled:opacity-30"
+              aria-label="remove"
+            >
+              ✕
+            </button>
+          </div>
+        ))}
+      </div>
+      {urls.length < MAX_PLACE_URLS && (
+        <button type="button" onClick={addUrl} className="text-xs font-medium text-pink-600 hover:text-pink-700">
+          + {tr('Add URL', locale)}
+        </button>
+      )}
+      {error && <p className="text-xs text-red-600">{error}</p>}
+      <button
+        type="button"
+        onClick={analyze}
+        disabled={loading}
+        className="rounded-xl bg-pink-600 px-4 py-2.5 text-sm font-medium text-white transition-colors hover:bg-pink-700 disabled:cursor-not-allowed disabled:opacity-60"
+      >
+        {loading ? tr('Analyzing...', locale) : tr('Analyze', locale)}
+      </button>
+    </Shell>
+  )
+}
+
 function PomodoroTimer() {
   const [work, setWork] = useState('25'), [rest, setRest] = useState('5'), [seconds, setSeconds] = useState(25 * 60), [running, setRunning] = useState(false), [mode, setMode] = useState<'work' | 'break'>('work')
   useEffect(() => {
@@ -436,6 +593,7 @@ export default function MiscTool({ slug, locale }: { slug: MiscSlug; locale: str
     'unemployment-benefit-calc': <UnemploymentBenefitCalc />,
     'korean-address-converter': <KoreanAddressConverter />,
     'memorial-49-calc': <Memorial49Calc />,
+    'naver-place-tag': <NaverPlaceTag />,
     'pomodoro-timer': <PomodoroTimer />,
     'stopwatch': <Stopwatch />,
     'timezone-converter': <TimezoneConverter />,

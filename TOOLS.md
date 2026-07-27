@@ -1,6 +1,6 @@
 # Tool List / 툴 목록
 
-총 106개 | 카테고리 9개
+총 107개 | 카테고리 9개
 
 ---
 
@@ -52,14 +52,14 @@
 | `percent-calc` | Percentage Calculator | 퍼센트 계산기 | ㅇ
 | `date-calc` | Date Calculator | 날짜 계산기 | ㅇ
 | `time-diff-calc` | Time Difference Calculator | 시간 차이 계산기 | ㅇ
-| `bmi-calc` | BMI Calculator | BMI 계산기 |
-| `average-calc` | Average Calculator | 평균 계산기 |
-| `gpa-calc` | GPA Calculator | 학점 계산기 |
-| `salary-calc` | Salary Calculator | 연봉 계산기 |
-| `hourly-calc` | Hourly Wage Calculator | 시급 계산기 |
-| `vat-calc` | VAT Calculator | 부가세 계산기 |
-| `currency-calc` | Currency Calculator | 환율 계산기 |
-| `compound-calc` | Compound Interest Calculator | 복리 계산기 |
+| `bmi-calc` | BMI Calculator | BMI 계산기 | ㅇ
+| `average-calc` | Average Calculator | 평균 계산기 | ㅇ
+| `gpa-calc` | GPA Calculator | 학점 계산기 | ㅇ
+| `salary-calc` | Salary Calculator | 연봉 계산기 | ㅇ
+| `hourly-calc` | Hourly Wage Calculator | 시급 계산기 | ㅇ
+| `vat-calc` | VAT Calculator | 부가세 계산기 | ㅇ
+| `currency-calc` | Currency Calculator | 환율 계산기 | ㅇ
+| `compound-calc` | Compound Interest Calculator | 복리 계산기 | 
 | `loan-calc` | Loan Calculator | 대출 이자 계산기 |
 | `lived-days-calc` | Days Lived Calculator | 살아온 날 계산기 |
 | `year-days-left` | Days Left in Year | 올해 남은 날 계산기 |
@@ -142,7 +142,7 @@
 
 ---
 
-## Korean Special / 한국 특화 (9)
+## Korean Special / 한국 특화 (10)
 
 | slug | English | 한글 |
 |------|---------|------|
@@ -155,6 +155,7 @@
 | `unemployment-benefit-calc` | Unemployment Benefit Calculator | 실업급여 계산기 |
 | `korean-address-converter` | Korean Address Converter | 구주소 ↔ 도로명주소 변환기 |
 | `memorial-49-calc` | 49th Day Memorial Calculator | 49재 날짜 계산기 |
+| `naver-place-tag` | Naver Place Tag Analyzer | 네이버 플레이스 태그 분석기 |
 
 ---
 

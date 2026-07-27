@@ -142,6 +142,7 @@ export const tools: Tool[] = [
   { slug: 'unemployment-benefit-calc',     category: 'kr', icon: 'WORK', implemented: true },
   { slug: 'korean-address-converter',      category: 'kr', icon: 'ADDR', implemented: true },
   { slug: 'memorial-49-calc',              category: 'kr', icon: '49',   implemented: true },
+  { slug: 'naver-place-tag',               category: 'kr', icon: 'TAG',  implemented: true },
 
   // Productivity (8)
   { slug: 'pomodoro-timer',             category: 'productivity', icon: 'POM',   implemented: true },

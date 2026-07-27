@@ -785,6 +785,10 @@
       "title": "49th Day Memorial Date Calculator",
       "desc": "Calculate the Korean 49th day memorial date"
     },
+    "naver-place-tag": {
+      "title": "Naver Place Tag Analyzer",
+      "desc": "Analyze competitor Naver Place URLs to find the most-used tags"
+    },
     "workday-countdown": {
       "title": "Workday Countdown Clock",
       "desc": "Count down to the end of the workday"
