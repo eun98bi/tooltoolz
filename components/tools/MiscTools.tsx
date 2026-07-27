@@ -363,6 +363,19 @@ function NaverPlaceTag() {
         )
       }
     >
+      <div className="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 text-xs leading-relaxed text-blue-700 dark:border-blue-800 dark:bg-blue-900/20 dark:text-blue-300">
+        {locale === 'kr' ? (
+          <>
+            <p>PC에서 원하는 키워드 검색 후 네이버 맵 목록의 가게명 우클릭 → 링크 주소 복사 후 붙여넣기 해야 정상 작동됩니다.</p>
+            <p className="mt-1">분석에는 3~10초 정도 소요됩니다.</p>
+          </>
+        ) : (
+          <>
+            <p>On PC, search your keyword on Naver Map, right-click a business name in the list, and copy the link address to paste here.</p>
+            <p className="mt-1">Analysis takes about 3-10 seconds.</p>
+          </>
+        )}
+      </div>
       <p className="text-xs text-gray-500 dark:text-gray-400">
         {locale === 'kr'
           ? `경쟁사 네이버 플레이스 URL을 최대 ${MAX_PLACE_URLS}개까지 입력하세요`
