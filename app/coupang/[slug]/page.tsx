@@ -29,6 +29,10 @@ export default async function CoupangBridgePage({
   return (
     <main className="flex min-h-screen flex-col items-center bg-gray-50 px-6 py-10 text-gray-900 dark:bg-gray-950 dark:text-gray-50">
       <div className="w-full max-w-sm space-y-5">
+        <p className="text-center text-xs text-gray-400">
+          쿠팡 파트너스 수수료를 받는 링크가 포함되어 있습니다
+        </p>
+
         {data.imageUrl ? (
           // eslint-disable-next-line @next/next/no-img-element
           <img
