@@ -706,6 +706,30 @@ export const seoArticles: Record<string, Record<Locale, SeoArticle>> = {
       ],
     },
   },
+  'image-laundry': {
+    kr: {
+      heading: '이미지 세탁소로 블로그 유사이미지 걱정 줄이기',
+      paragraphs: [
+        '이미지 세탁소는 네이버 블로그, 카페, 쇼핑몰 상세페이지처럼 같은 사진을 여러 글에 다시 써야 할 때 유용한 도구입니다. 한 번 올린 사진을 그대로 재업로드하면 검색엔진이 동일 이미지로 인식해 유사문서나 중복 콘텐츠로 판단할 가능성이 있는데, 이미지 세탁소는 눈으로는 거의 차이가 없도록 유지하면서 파일 자체를 새 이미지로 만들어 줍니다.',
+        '이미지 세탁소의 핵심은 재인코딩과 미세 변형입니다. 사진을 브라우저에서 새로 그려 저장하기 때문에 EXIF, GPS 위치, 카메라 모델 같은 메타데이터가 결과 파일에 남지 않습니다. 여기에 아주 약한 랜덤 노이즈, 몇 픽셀 수준의 가장자리 크롭, 1~3% 크기 변경, 미세한 밝기·채도 보정을 함께 적용하면 픽셀 값과 해시가 원본과 달라집니다.',
+        '처음 사용한다면 오른쪽 설정의 추천 세탁 버튼을 눌러 보세요. 크롭 3px, 크기 98%, 밝기 +2, 채도 103%, 노이즈 3 정도의 눈에 띄지 않는 조합이 한 번에 설정되고 파일명도 무작위로 바뀝니다. 이후 필요에 따라 노이즈 강도나 크롭 값을 조정하면 됩니다.',
+        '여러 장을 한 번에 올리고 전체 세탁하기를 누르면 파일마다 대기, 세탁 중, 완료 상태와 전체 진행률이 표시됩니다. 완료된 이미지는 개별로 받거나 전체 다운로드로 한 번에 저장할 수 있고, 목록에서 이미지를 선택하면 원본과 결과를 나란히 비교할 수 있습니다.',
+        '모든 처리는 서버 업로드 없이 현재 브라우저 안에서 이루어집니다. 원본 이미지는 어디에도 저장되지 않으므로 개인 사진이나 미공개 제품 사진도 안심하고 처리할 수 있습니다. 모바일에서도 같은 화면으로 사용할 수 있습니다.',
+        '다만 이미지 세탁소는 내가 촬영했거나 사용 권한이 있는 이미지를 재활용하기 위한 도구입니다. 다른 사람의 저작물을 세탁해 출처 없이 쓰는 것은 저작권 침해가 될 수 있으니, 권리자의 허락을 받은 이미지에만 사용하세요. 또한 검색엔진의 판단 기준은 공개되어 있지 않으므로 이미지와 함께 본문 내용도 새롭게 작성하는 것이 가장 확실한 방법입니다.',
+      ],
+    },
+    en: {
+      heading: 'Image Laundry: Reuse Your Photos Without Duplicate Flags',
+      paragraphs: [
+        'Image Laundry helps bloggers, store owners, and marketers reuse the same photos across multiple posts or listings. Uploading an identical file again can make search engines and platforms treat it as a duplicate image, which may weaken how fresh your content looks. Image Laundry keeps the photo visually the same while producing a genuinely new file.',
+        'It works by re-encoding each image and applying subtle changes. Because the image is redrawn in your browser, EXIF data, GPS location, and camera details are never copied into the output. Add a faint layer of random noise, trim a few pixels from the edges, resize by a percent or two, and nudge brightness or saturation, and the pixel data and file hash no longer match the original.',
+        'If you are not sure where to start, click Recommended in the settings panel. It applies a barely noticeable combination: a 3px trim, 98% scale, +2 brightness, 103% saturation, noise level 3, and random file names. You can fine-tune any value afterward.',
+        'Drop in as many images as you need and press Wash all images. Each file shows its own status, queued, washing, done, or failed, along with an overall progress bar. Download results one by one or all at once, and select any file to compare the original and washed versions side by side.',
+        'Everything runs locally in your browser with no uploads, so your originals are never stored anywhere. That makes it safe for personal photos and unreleased product shots, and the layout works just as well on a phone.',
+        'Image Laundry is meant for photos you took yourself or have the rights to use. Disguising someone else\'s copyrighted work does not make it yours, so only process images you are allowed to reuse. Platforms do not publish exactly how they detect duplicates, so pairing refreshed images with newly written text is still the most reliable approach.',
+      ],
+    },
+  },
   'grayscale-image': {
     kr: {
       heading: '사진 흑백 변환으로 분위기와 문서 활용도 높이기',

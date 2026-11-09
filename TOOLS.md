@@ -1,6 +1,6 @@
 # Tool List / 툴 목록
 
-총 107개 | 카테고리 9개
+총 108개 | 카테고리 9개
 
 ---
 
@@ -28,7 +28,7 @@
 
 ---
 
-## Image / 이미지 (10)
+## Image / 이미지 (11)
 
 | slug | English | 한글 |
 |------|---------|------|
@@ -42,6 +42,7 @@
 | `img-rotate` | Image Rotator | 이미지 회전기 | ㅇ
 | `img-size-reduce` | Image Size Reducer | 이미지 용량 줄이기 | ㅇ
 | `grayscale-image` | Grayscale Image | 흑백 이미지 변환기 | ㅇ
+| `image-laundry` | Image Laundry | 이미지 세탁소 | ㅇ
 
 ---
 

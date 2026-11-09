@@ -48,7 +48,7 @@ export const tools: Tool[] = [
   { slug: 'random-nickname',    category: 'text',      icon: 'NIK', implemented: true },
   { slug: 'morse-code',         category: 'text',      icon: '•−',  implemented: true },
 
-  // Image (10)
+  // Image (11)
   { slug: 'jpg-to-png',       category: 'image', icon: 'JPG',  implemented: true },
   { slug: 'png-to-webp',      category: 'image', icon: 'WEBP', implemented: true },
   { slug: 'img-compress',     category: 'image', icon: 'ZIP',  implemented: true },
@@ -59,6 +59,7 @@ export const tools: Tool[] = [
   { slug: 'img-rotate',       category: 'image', icon: 'ROT',  implemented: true },
   { slug: 'img-size-reduce',  category: 'image', icon: 'KB',   implemented: true },
   { slug: 'grayscale-image',  category: 'image', icon: 'BW',   implemented: true },
+  { slug: 'image-laundry',    category: 'image', icon: 'WASH', implemented: true },
 
   // Calculator (19)
   { slug: 'percent-calc',             category: 'calc', icon: '%',    implemented: true },
